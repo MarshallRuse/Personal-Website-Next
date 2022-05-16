@@ -1,0 +1,80 @@
+.blogSectionContainer {
+    background-color: #000;
+    padding-bottom: 4rem;
+    text-align: center;
+}
+
+.sectionHeader {
+    color: var(--color-blue-light);
+    font-family: "Orbitron", sans-serif;
+    font-size: 3rem;
+    margin: 0;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    text-align: center;
+}
+
+.subsection {
+    margin-bottom: 4rem;
+}
+
+.blogTitleLine {
+    align-items: baseline;
+    color: var(--color-blue-light);
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Jura", sans-serif;
+    padding: 0 1rem;
+    text-align: left;
+}
+
+%blogPost {
+    font-family: "Jura", sans-serif;
+    margin: 0;
+    text-align: left;
+}
+
+.blogTitlePrefix {
+    @extend %blogPost;
+    display: inline;
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.blogTitle {
+    @extend %blogPost;
+    color: var(--color-pink);
+    font-size: 2rem;
+}
+
+.detailLine {
+    @extend %blogPost;
+    align-items: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    padding: 0 4rem;
+    width: 100%;
+}
+
+.detailProperty {
+    color: var(--color-orange);
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.detailValue {
+    color: var(--color-yellow);
+
+    &.inline {
+        display: inline;
+    }
+}
+
+.detailLink {
+    display: block;
+    word-break: break-all;
+    &:visited {
+        color: var(--color-yellow);
+    }
+}

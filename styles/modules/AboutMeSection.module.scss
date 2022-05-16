@@ -1,0 +1,131 @@
+@use "../variables.module.scss" as *;
+
+%augmentedGlass {
+    --aug-border-bg: rgba(255, 255, 255, 0.18);
+    --aug-inlay-bg: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+}
+
+.background {
+    background: linear-gradient(130deg, var(--color-blue-mid), var(--color-purple) 50%);
+    background-size: cover;
+    padding: 4rem 0;
+    width: 100%;
+}
+
+.glassPanelWrapper {
+    margin: 0 auto;
+    position: relative;
+    width: clamp(250px, 120ch, 100%);
+
+    @media (max-width: $breakpoint-sm) {
+        width: clamp(250px, 120ch, 90%);
+    }
+}
+
+.glassPanel {
+    @extend %augmentedGlass;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 80px;
+    width: 100%;
+
+    --aug-tl: 30px;
+    --aug-tr: 30px;
+    --aug-b-extend1: 25%;
+    --aug-b-inset1: 20px;
+    --aug-bl: 40px;
+    --aug-br: 40px;
+
+    @media (min-width: $breakpoint-sm) {
+        --aug-tl: 40px;
+        --aug-tl-inset2: 37px;
+        --aug-tl-inset1: 375px;
+        padding-top: 2rem;
+    }
+}
+
+.tabs {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-top: 20px;
+    width: 90%;
+
+    @media (min-width: $breakpoint-sm) {
+        margin-top: 0;
+        position: absolute;
+        width: auto;
+    }
+
+    &.hideSmallScreen {
+        @media (max-width: $breakpoint-sm) {
+            display: none;
+        }
+    }
+    &.hideLargeScreen {
+        @media (min-width: $breakpoint-sm) {
+            display: none;
+        }
+    }
+}
+
+.glassPanelTab {
+    @extend %augmentedGlass;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex: 1 0 50%;
+    font-family: "Orbitron", sans-serif;
+    justify-content: center;
+    min-width: 150px;
+    padding: 1.5rem;
+    text-align: center;
+
+    @media (min-width: $breakpoint-sm) {
+        min-width: 200px;
+    }
+
+    &::before {
+        transition: all 0.2s ease-out;
+    }
+
+    &:hover {
+        --aug-border-bg: rgba(255, 255, 255, 0.28);
+        --aug-inlay-bg: rgba(255, 255, 255, 0.45);
+    }
+
+    &.rightTab {
+        @media (min-width: $breakpoint-sm) {
+            --aug-br: 33px;
+        }
+    }
+
+    &.active {
+        --aug-border-bg: var(--color-blue-light);
+        --aug-inlay-bg: var(--color-blue-light);
+        background: #fff;
+    }
+}
+
+.datedLine {
+    display: flex;
+    & .date {
+        margin-left: auto;
+    }
+}
+
+.contactColumn {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+    gap: 20px;
+    width: max-content;
+}

@@ -1,0 +1,4 @@
+@mixin glowingText($glow-color) {
+    text-shadow: 0 0 2px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 42px $glow-color, 0 0 82px $glow-color,
+        0 0 92px $glow-color, 0 0 102px $glow-color, 0 0 151px $glow-color;
+}

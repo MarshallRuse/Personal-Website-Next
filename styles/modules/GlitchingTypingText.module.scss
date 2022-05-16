@@ -1,0 +1,30 @@
+@keyframes blinking {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+}
+
+.renderedText {
+    position: relative;
+    display: inline-block;
+
+    &.caret::after {
+        content: "";
+        position: absolute;
+        right: -(var(--caret-width) - 1);
+        height: 1em;
+        border-right: var(--caret-width) solid var(--caret-color);
+    }
+
+    &.blinkingCaret {
+        animation: blinking var(--caret-blinking-speed) linear infinite;
+    }
+}

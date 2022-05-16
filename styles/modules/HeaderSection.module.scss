@@ -1,0 +1,26 @@
+@use "../variables.module.scss" as *;
+
+.headerContainer {
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    @media (min-width: $breakpoint-sm) {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+.headerSubtitleSection {
+    overflow: hidden;
+    @media (max-width: $breakpoint-sm) {
+        word-spacing: 100vw;
+    }
+}

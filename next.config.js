@@ -1,6 +1,32 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-}
+    images: {
+        domains: ["res.cloudinary.com"],
+    },
+    reactStrictMode: true,
+    webpack(config) {
+        config.module.rules.push({
+            test: /\.svg$/i,
+            issuer: /\.[jt]sx?$/,
+            use: [
+                {
+                    loader: "@svgr/webpack",
+                    options: {
+                        svgoConfig: {
+                            plugins: [
+                                {
+                                    name: "cleanupIDs",
+                                    active: false,
+                                },
+                            ],
+                        },
+                    },
+                },
+            ],
+        });
 
-module.exports = nextConfig
+        return config;
+    },
+};
+
+module.exports = nextConfig;

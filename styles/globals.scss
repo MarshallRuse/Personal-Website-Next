@@ -1,0 +1,148 @@
+@use "variables.module.scss" as *;
+
+:root {
+    /* breakpoints 
+		taken from MUI specification */
+    --breakpoint-xs: #{$breakpoint-xs};
+    --breakpoint-sm: #{$breakpoint-sm};
+    --breakpoint-md: #{$breakpoint-md};
+    --breakpoint-lg: #{$breakpoint-lg};
+    --breakpoint-xl: #{$breakpoint-xl};
+    /* colors */
+    --color-purple: #{$color-purple};
+    --color-purple-raw: #{$color-purple-raw};
+    --color-pink: #{$color-pink};
+    --color-pink-raw: #{$color-pink-raw};
+    --color-blue-light: #{$color-blue-light};
+    --color-blue-light-raw: #{$color-blue-light-raw};
+    --color-blue-mid: #{$color-blue-mid};
+    --color-blue-dark: #{$color-blue-dark};
+    --color-blue-dark-raw: #{$color-blue-dark-raw};
+    --color-yellow: #{$color-yellow};
+    --color-orange: #{$color-orange};
+    --color-bootstrap: #{$color-bootstrap};
+    --color-bootstrap-raw: #{$color-bootstrap-raw};
+    --color-css3: #{$color-css3};
+    --color-css3-raw: #{$color-css3-raw};
+    --color-express: #{$color-express};
+    --color-express-raw: #{$color-express-raw};
+    --color-firebase: #{$color-firebase};
+    --color-firebase-raw: #{$color-firebase-raw};
+    --color-handlebars: #{$color-handlebars};
+    --color-handlebars-raw: #{$color-handlebars-raw};
+    --color-html5: #{$color-html5};
+    --color-html5-raw: #{$color-html5-raw};
+    --color-java: #{$color-java};
+    --color-java-raw: #{$color-java-raw};
+    --color-javascript: #{$color-javascript};
+    --color-javascript-raw: #{$color-javascript-raw};
+    --color-materialui: #{$color-materialui};
+    --color-materialui-raw: #{$color-materialui-raw};
+    --color-matplotlib: #{$color-matplotlib};
+    --color-matplotlib-raw: #{$color-matplotlib-raw};
+    --color-mongodb: #{$color-mongodb};
+    --color-mongodb-raw: #{$color-mongodb-raw};
+    --color-mysql: #{$color-mysql};
+    --color-mysql-raw: #{$color-mysql-raw};
+    --color-nextjs: #{$color-nextjs};
+    --color-nextjs-raw: #{$color-nextjs-raw};
+    --color-nodejs: #{$color-nodejs};
+    --color-nodejs-raw: #{$color-nodejs-raw};
+    --color-numpy: #{$color-numpy};
+    --color-numpy-raw: #{$color-numpy-raw};
+    --color-python: #{$color-python};
+    --color-python-raw: #{$color-python-raw};
+    --color-react: #{$color-react};
+    --color-react-raw: #{$color-react-raw};
+    --color-redux: #{$color-redux};
+    --color-redux-raw: #{$color-redux-raw};
+    --color-sass: #{$color-sass};
+    --color-sass-raw: #{$color-sass-raw};
+    --color-styledcomponents: #{$color-styledcomponents};
+    --color-styledcomponents-raw: #{$color-styledcomponents-raw};
+}
+
+html,
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+        Helvetica Neue, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.flexContainer {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -16px;
+    width: calc(100% + 32px);
+}
+
+.flexItem {
+    box-sizing: border-box;
+    flex-basis: 100%;
+    flex-grow: 0;
+    margin: 0;
+    max-width: 100%;
+
+    @media (min-width: $breakpoint-md) {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+        flex-basis: 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+@keyframes fadeInBurnBright {
+    to {
+        opacity: 1;
+        filter: saturate(1.5);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes drawIn {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+#highways {
+    stroke: var(--color-blue-light);
+    stroke-width: 1px;
+    // stroke-dasharray: 550;
+    // stroke-dashoffset: 550;
+    opacity: 0;
+    filter: saturate(0);
+    animation: fadeInBurnBright 1.5s ease-in forwards, fadeOut 0.75s ease-out 3s forwards;
+}
+
+#arteries path {
+    stroke: var(--color-pink);
+    stroke-width: 0.5px;
+    // stroke-dasharray: 200;
+    // stroke-dashoffset: 200;
+    opacity: 0;
+    filter: saturate(0);
+    animation: fadeInBurnBright 1.5s ease-in 0.25s forwards, fadeOut 0.75s ease-out 3s forwards;
+}

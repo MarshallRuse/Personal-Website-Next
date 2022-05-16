@@ -1,0 +1,48 @@
+@use "../variables.module.scss" as *;
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.svgWrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.animatedSVG {
+    position: absolute;
+    min-height: 100vh;
+
+    @media (max-width: $breakpoint-sm) {
+        transform: translateX(-38%);
+    }
+
+    & image {
+        opacity: 0;
+        animation: fadeIn 1s ease-in 1.5s forwards;
+    }
+}
+
+.colorBackground {
+    background-color: #023e58;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.linearGradientBottom {
+    background-image: linear-gradient(to bottom, transparent 60%, var(--color-blue-dark));
+    min-height: 100vh;
+    position: relative;
+}
+
+.linearGradientTop {
+    background-image: linear-gradient(to bottom, #2a2552, 30%, transparent);
+    opacity: 0;
+    color: #fff;
+    min-height: 100vh;
+
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 2s;
+}
