@@ -57,6 +57,8 @@ $color-sass: rgb(205, 103, 153);
 $color-sass-raw: 205, 103, 153;
 $color-styledcomponents: rgb(241, 160, 219);
 $color-styledcomponents-raw: 241, 160, 219;
+$color-tailwindcss: rgb(56, 178, 172);
+$color-tailwindcss-raw: 56, 178, 172;
 
 :export {
     breakpointXs: $breakpoint-xs;
@@ -114,4 +116,6 @@ $color-styledcomponents-raw: 241, 160, 219;
     colorSassRaw: $color-sass-raw;
     colorStyledComponents: $color-styledcomponents;
     colorStyledComponentsRaw: $color-styledcomponents-raw;
+    colorTailwindCSS: $color-tailwindcss;
+    colorTailwindCSSRaw: $color-tailwindcss-raw;
 }

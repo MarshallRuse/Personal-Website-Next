@@ -2,6 +2,8 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import styles from "../../styles/modules/ProjectCard.module.scss";
 import CloudinaryImage from "./CloudinaryImage";
+import GitHub from "@mui/icons-material/GitHub";
+import Visibility from "@mui/icons-material/Visibility";
 
 const ProjectCard = (props) => {
     const {
@@ -29,7 +31,7 @@ const ProjectCard = (props) => {
             <div
                 className={styles.cardBody}
                 data-augmented-ui={`tl-clip tr-2-clip-x ${sourceLink && "br-2-clip-x"} ${
-                    demoLink && "bl-2-clip-x"
+                    (demoLink || liveLink) && "bl-2-clip-x"
                 } both`}
                 onClick={goToPage}
             >
@@ -62,6 +64,7 @@ const ProjectCard = (props) => {
                     className={`${styles.btnCardAction} ${styles.btnDemo}`}
                     data-augmented-ui='tr-clip tl-clip both'
                 >
+                    <Visibility style={{ marginRight: "5px" }} />
                     {liveLink ? "Visit" : "Demo"}
                 </a>
             )}
@@ -73,6 +76,7 @@ const ProjectCard = (props) => {
                     className={`${styles.btnCardAction} ${styles.btnSource}`}
                     data-augmented-ui='tr-clip tl-clip both'
                 >
+                    <GitHub style={{ marginRight: "5px" }} />
                     Source
                 </a>
             )}

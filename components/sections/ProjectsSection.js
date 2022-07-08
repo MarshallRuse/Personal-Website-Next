@@ -13,6 +13,23 @@ const ProjectsSection = () => (
             <div className='flexContainer'>
                 <div className={`flexItem ${styles.projectBox}`}>
                     <ProjectCard
+                        cardImage='SnazzyStonesWebsite/snazzy-stones-project-card'
+                        cardImageAltText='Card image for SnazzyStones.ca Next.js app'
+                        cardTitle='snazzystones.ca'
+                        cardSubtitle='SnazzyStones website'
+                        projectPageLink='projects/SnazzyStonesWebsite'
+                        liveLink='https://snazzystones.ca'
+                        sourceLink='https://github.com/MarshallRuse/SnazzyStones-Next'
+                        stackIcons={[
+                            { class: "react", icon: "/svgs/logos/react.svg" },
+                            { class: "materialui", icon: "/svgs/logos/material-ui.svg" },
+                            { class: "nextjs", icon: "/svgs/logos/nextjs.svg" },
+                            { class: "tailwindcss", icon: "/svgs/logos/tailwindcss.svg" },
+                        ]}
+                    />
+                </div>
+                <div className={`flexItem ${styles.projectBox}`}>
+                    <ProjectCard
                         cardImage='SnazzyStock/snazzyStockCardImage'
                         cardImageAltText='Card image for Snazzy Stock app'
                         cardTitle='Snazzy Stock'
@@ -37,7 +54,7 @@ const ProjectsSection = () => (
                         cardSubtitle='Group and filter rotation residents'
                         cardSubtitleStyling={{ fontSize: "22px" }}
                         projectPageLink='projects/RotationCoordinatorReportFormatter'
-                        demoLink='https://rotation-coordinator-report-formatter.netlify.app'
+                        liveLink='https://rotation-coordinator-report-formatter.netlify.app'
                         sourceLink='https://github.com/MarshallRuse/rotation-coordinator-data-formatter'
                         stackIcons={[
                             { class: "react", icon: "/svgs/logos/react.svg" },

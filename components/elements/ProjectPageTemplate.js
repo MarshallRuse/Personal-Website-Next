@@ -1,7 +1,9 @@
 import Link from "next/link";
 import styles from "../../styles/modules/ProjectPageTemplate.module.scss";
 import styleVariables from "../../styles/variables.module.scss";
-import { ArrowBack, GitHub } from "@mui/icons-material";
+import ArrowBack from "@mui/icons-material/ArrowBack";
+import GitHub from "@mui/icons-material/GitHub";
+import Visibility from "@mui/icons-material/Visibility";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import useMediaQuery from "../hooks/useMediaQuery";
@@ -68,14 +70,24 @@ const ProjectPageTemplate = ({
                             target='_blank'
                             rel='noopener noreferrer'
                         >
+                            <Visibility style={{ marginRight: "5px" }} />
                             Demo
+                        </a>
+                    )}
+                    {projectLiveLink && (
+                        <a
+                            className={`${styles.demoBtn} ${!projectLiveLink && styles.disabled}`}
+                            href={projectLiveLink}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                        >
+                            <Visibility style={{ marginRight: "5px" }} />
+                            Visit
                         </a>
                     )}
                     {projectSourceLink && (
                         <a
-                            className={`${styles.demoBtn} ${
-                                (!projectSourceLink || projectSourceLink) && styles.disabled
-                            }`}
+                            className={`${styles.sourceBtn} ${!projectSourceLink && styles.disabled}`}
                             href={projectSourceLink}
                             target='_blank'
                             rel='noopener noreferrer'
