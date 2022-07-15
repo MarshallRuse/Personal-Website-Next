@@ -1,0 +1,19 @@
+@use "../mixins.module.scss";
+
+.pageWrapper {
+    align-items: center;
+    background-color: var(--color-blue-dark);
+    border-bottom: 2px solid var(--color-pink);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-family: "Jura", sans-serif;
+    font-size: 2rem;
+    justify-content: center;
+    height: 100vh;
+    padding: 40px 0;
+}
+
+.glowingText {
+    @include mixins.glowingText(var(--glow-color));
+}

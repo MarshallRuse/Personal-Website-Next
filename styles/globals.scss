@@ -139,7 +139,7 @@ a {
     animation: fadeInBurnBright 1.5s ease-in forwards, fadeOut 0.75s ease-out 3s forwards;
 }
 
-#arteries path {
+#arteries {
     stroke: var(--color-pink);
     stroke-width: 0.5px;
     // stroke-dasharray: 200;
@@ -147,4 +147,26 @@ a {
     opacity: 0;
     filter: saturate(0);
     animation: fadeInBurnBright 1.5s ease-in 0.25s forwards, fadeOut 0.75s ease-out 3s forwards;
+}
+
+.haloList {
+    list-style: none;
+    & li {
+        line-height: 2;
+        margin-bottom: 1em;
+        max-width: 65ch;
+
+        &::before {
+            background-image: url("/svgs/halo-bullet.svg");
+            content: "";
+            display: inline-block;
+            height: 1em;
+            width: 1em;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-right: 0.5em;
+            margin-left: -1.5em;
+            margin-bottom: -0.4em;
+        }
+    }
 }

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import styles from "../../styles/modules/ProjectPageTemplate.module.scss";
 import styleVariables from "../../styles/variables.module.scss";
-import ArrowBack from "@mui/icons-material/ArrowBack";
 import GitHub from "@mui/icons-material/GitHub";
 import Visibility from "@mui/icons-material/Visibility";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -9,6 +8,7 @@ import { Carousel } from "react-responsive-carousel";
 import useMediaQuery from "../hooks/useMediaQuery";
 import CloudinaryImage from "./CloudinaryImage";
 import { SectionTitle, SubsectionTitle, TextContainer } from "./styledComponents";
+import BackArrow from "./BackArrow";
 
 const ProjectPageTemplate = ({
     carouselBackgroundImage,
@@ -34,13 +34,7 @@ const ProjectPageTemplate = ({
 
     return (
         <main className={styles.pageWrapper}>
-            <span className={styles.backArrowWrapper}>
-                <Link href='/' scroll={false}>
-                    <a>
-                        <ArrowBack fontSize='large' />
-                    </a>
-                </Link>
-            </span>
+            <BackArrow />
             <div className={`${styles.backgroundImageContainer} ${styles.carouselBackground}`}>
                 {(carouselBackgroundImageSmallScreenAlt || carouselBackgroundImage) && (
                     <CloudinaryImage
@@ -111,7 +105,7 @@ const ProjectPageTemplate = ({
                     >
                         {carouselImages.map((imageObj, index) =>
                             imageObj.slideComponent ? (
-                                <imageObj.slideComponent />
+                                <imageObj.slideComponent key={`carousel-slideComponent-${index}`} />
                             ) : (
                                 <div className={styles.slideContainer} key={`carousel-image-${index}`}>
                                     <CloudinaryImage

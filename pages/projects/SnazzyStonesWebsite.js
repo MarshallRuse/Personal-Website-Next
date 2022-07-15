@@ -46,11 +46,11 @@ const carouselImages = [
 const BackgroundInfo = () => (
     <>
         <p>
-            <NavLink href='https://snazzystones.ca' target='_blank' rel='noreferrer'>
+            <NavLink href='https://snazzystones.ca' target='_blank' rel='noopener noreferrer'>
                 Snazzystones.ca
             </NavLink>{" "}
             is an e-commerce themed front-end for{" "}
-            <NavLink href='https://www.etsy.com/ca/shop/SnazzyStonesJewelry' target='_blank' rel='noreferrer'>
+            <NavLink href='https://www.etsy.com/ca/shop/SnazzyStonesJewelry' target='_blank' rel='noopener noreferrer'>
                 the Etsy page, SnazzyStonesJewelry
             </NavLink>
             . Previously, Snazzystones.ca was a Wordpress site using Woocommerce for independent e-commerce activity,
@@ -58,11 +58,11 @@ const BackgroundInfo = () => (
             well as the latter&apos;s disproportionate popularity, necessitated a de-listing of products on the
             Wordpress site. Rather than removing this sales channel, an alternative solution was proposed, which was to
             build a{" "}
-            <NavLink href='https://nextjs.org/' target='_blank' rel='noreferrer'>
+            <NavLink href='https://nextjs.org/' target='_blank' rel='noopener noreferrer'>
                 Next.js
             </NavLink>{" "}
             front-end that pulls data from{" "}
-            <NavLink href='https://developer.etsy.com/documentation/' target='_blank' rel='noreferrer'>
+            <NavLink href='https://developer.etsy.com/documentation/' target='_blank' rel='noopener noreferrer'>
                 Etsy&apos;s API
             </NavLink>{" "}
             and funnels users to the Etsy page.
@@ -77,7 +77,7 @@ const FeaturesInfo = () => (
             that the user checks out, at which point they are sent to the store&apos;s Etsy page. Backed by data pulled
             from Etsy&apos;s API (every 12 hours), the website contains a number of features, such as:
         </p>
-        <ul>
+        <ul className='haloList'>
             <li>Title, description, origin-country, and price of all products actively listed on the site / Etsy.</li>
             <li>An autocompleting search of all products actively listed on the site / Etsy.</li>
             <li>Category catalogue pages that can be sorted by date-added, popularity, and price.</li>
@@ -87,16 +87,17 @@ const FeaturesInfo = () => (
             <li>A link to a product&apos;s page on Etsy, so that products can be purchased there.</li>
         </ul>
         <p>In addition, the website has a few features not directly powered by Etsy:</p>
-        <ul>
+        <ul className='haloList'>
             <li>
                 A paginated Instagram feed of{" "}
-                <NavLink href='https://www.instagram.com/snazzystones' target='_blank' rel='noreferrer'>
+                <NavLink href='https://www.instagram.com/snazzystones' target='_blank' rel='noopener noreferrer'>
                     SnazzyStone&apos;s latest Instagram posts
                 </NavLink>
                 .
             </li>
             <li>
-                Social sharing buttons on each product's page for sharing to Facebook, Twitter, WhatsApp, and email.
+                Social sharing buttons on each product&apos;s page for sharing to Facebook, Twitter, WhatsApp, and
+                email.
             </li>
             <li>A page with emdedded Google Maps for SnazzyStone&apos;s various in-person markets.</li>
             <li>A Contact page for sending inquiries.</li>
@@ -133,7 +134,7 @@ const DevelopmentInfo = () => (
             <NavLink
                 href='https://nextjs.org/docs/basic-features/data-fetching/get-static-props'
                 target='_blank'
-                rel='noreferrer'
+                rel='noopener noreferrer'
             >
                 statically-generated
             </NavLink>{" "}
@@ -141,10 +142,10 @@ const DevelopmentInfo = () => (
             <NavLink
                 href='https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration'
                 target='_blank'
-                rel='noreferrer'
+                rel='noopener noreferrer'
             >
                 incrementally statically regenerated
-            </NavLink>
+            </NavLink>{" "}
             pages.
         </p>
         <SubSubsectionTitle>Front-End</SubSubsectionTitle>
@@ -155,7 +156,7 @@ const DevelopmentInfo = () => (
         </p>
         <p>
             Styling for the website primarily uses{" "}
-            <NavLink href='https://tailwindcss.com/' target='_blank' rel='noreferrer'>
+            <NavLink href='https://tailwindcss.com/' target='_blank' rel='noopener noreferrer'>
                 Tailwind CSS
             </NavLink>
             , a popular utility-first CSS framework that allowed rapid styling of the front-end with minimal duplication
@@ -163,7 +164,7 @@ const DevelopmentInfo = () => (
             are separated into modules relevant to each page to optimize the CSS payload size for each page. Complex
             animations, such as the opening of the mobile nav-menu and the playful hovering of the Social Share icons,
             use{" "}
-            <NavLink href='https://www.framer.com/motion/' target='_blank' rel='noreferrer'>
+            <NavLink href='https://www.framer.com/motion/' target='_blank' rel='noopener noreferrer'>
                 Framer-Motion
             </NavLink>
             .
@@ -173,23 +174,23 @@ const DevelopmentInfo = () => (
             The website doesn&apos;t have a typical back-end, as the motivation for re-creating the website was for it
             to serve as a facade / additional funnel for the Etsy shop, which handles the product database and
             e-commerce functionality. As such,{" "}
-            <NavLink href='https://developer.etsy.com/documentation/' target='_blank' rel='noreferrer'>
+            <NavLink href='https://developer.etsy.com/documentation/' target='_blank' rel='noopener noreferrer'>
                 Etsy&apos;s public API
             </NavLink>{" "}
             is the source of data for the products, as noted in the Features section.
         </p>
         <p>Additionally, a few other APIs are in use for various sections of the website:</p>
-        <ul>
+        <ul className='haloList'>
             <li>
                 <NavLink
                     href='https://developers.google.com/maps/documentation/embed/get-started'
                     target='_blank'
-                    rel='noreferrer'
+                    rel='noopener noreferrer'
                 >
                     Embedded Google Maps
                 </NavLink>{" "}
                 to the in-person market locations are in use on the{" "}
-                <NavLink href='https://snazzystones.ca/our-shows' target='_blank' rel='noreferrer'>
+                <NavLink href='https://snazzystones.ca/our-shows' target='_blank' rel='noopener noreferrer'>
                     Our Shows
                 </NavLink>{" "}
                 page.
@@ -198,22 +199,22 @@ const DevelopmentInfo = () => (
                 <NavLink
                     href='https://developers.facebook.com/docs/instagram-basic-display-api/'
                     target='_blank'
-                    rel='noreferrer'
+                    rel='noopener noreferrer'
                 >
                     The Instagram Basic Display API
                 </NavLink>{" "}
                 is used to generate an up-to-date Instagram-post feed on the Home page.
             </li>
             <li>
-                <NavLink href='https://sendgrid.com/solutions/email-api/' target='_blank' rel='noreferrer'>
+                <NavLink href='https://sendgrid.com/solutions/email-api/' target='_blank' rel='noopener noreferrer'>
                     SendGrid&apos;s Email API
                 </NavLink>
                 , along with their{" "}
-                <NavLink href='https://www.npmjs.com/package/@sendgrid/mail' target='_blank' rel='noreferrer'>
+                <NavLink href='https://www.npmjs.com/package/@sendgrid/mail' target='_blank' rel='noopener noreferrer'>
                     @sendgrid/mail Node.js package
                 </NavLink>{" "}
                 is used on the{" "}
-                <NavLink href='https://snazzystones.ca/contact-us' target='_blank' rel='noreferrer'>
+                <NavLink href='https://snazzystones.ca/contact-us' target='_blank' rel='noopener noreferrer'>
                     Contact Us
                 </NavLink>{" "}
                 page to send inquiry emails to the site owner through a branded domain email.
@@ -226,7 +227,7 @@ export default function SnazzyStonesWebsite() {
     return (
         <ProjectPageTemplate
             carouselBackgroundImage='SnazzyStonesWebsite/chainBracelets_2020-10-12'
-            pageTitle='SnazzyStones.ca'
+            pageTitle={<>Snazzy&shy;Stones.ca</>}
             projectSourceLink='https://github.com/MarshallRuse/SnazzyStones-Next'
             projectLiveLink='https://snazzystones.ca'
             carouselImages={carouselImages}

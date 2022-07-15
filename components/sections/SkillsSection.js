@@ -16,6 +16,7 @@ import PythonLogo from "../svgs/logos/colorless/python.svg";
 import ReactLogo from "../svgs/logos/colorless/react.svg";
 import ReduxLogo from "../svgs/logos/colorless/redux.svg";
 import SassLogo from "../svgs/logos/colorless/sass.svg";
+import TailwindCSSLogo from "../svgs/logos/colorless/tailwindcss.svg";
 import GlowingIcon from "../elements/GlowingIcon.js";
 import { IconRow, IconBox, SectionTitle, SubSubsectionTitle } from "../elements/styledComponents";
 
@@ -41,11 +42,7 @@ const SkillsSection = () => {
                         <Css3Logo />
                     </GlowingIcon>
                 </IconBox>
-                <IconBox>
-                    <GlowingIcon title='Sass' glowColor={styleVariables.colorSass}>
-                        <SassLogo />
-                    </GlowingIcon>
-                </IconBox>
+
                 <IconBox>
                     <GlowingIcon title='JavaScript' glowColor={styleVariables.colorJavaScript}>
                         <JavaScriptLogo />
@@ -63,7 +60,7 @@ const SkillsSection = () => {
                 </IconBox>
             </IconRow>
             <IconRow>
-                <SubSubsectionTitle element='h4'>Frameworks</SubSubsectionTitle>
+                <SubSubsectionTitle element='h4'>Front-End</SubSubsectionTitle>
                 <IconBox>
                     <GlowingIcon title='React' glowColor={styleVariables.colorReact}>
                         <ReactLogo />
@@ -80,8 +77,31 @@ const SkillsSection = () => {
                     </GlowingIcon>
                 </IconBox>
                 <IconBox>
+                    <GlowingIcon title='Sass' glowColor={styleVariables.colorSass}>
+                        <SassLogo />
+                    </GlowingIcon>
+                </IconBox>
+                <IconBox>
+                    <GlowingIcon title='MUI' glowColor={styleVariables.colorMaterialUI}>
+                        <MaterialUILogo />
+                    </GlowingIcon>
+                </IconBox>
+                <IconBox>
                     <GlowingIcon title='Bootstrap' glowColor={styleVariables.colorBootstrap}>
                         <BootstrapLogo />
+                    </GlowingIcon>
+                </IconBox>
+                <IconBox>
+                    <GlowingIcon title='Tailwind CSS' glowColor={styleVariables.colorTailwindCSS}>
+                        <TailwindCSSLogo />
+                    </GlowingIcon>
+                </IconBox>
+            </IconRow>
+            <IconRow>
+                <SubSubsectionTitle element='h4'>Back-End</SubSubsectionTitle>
+                <IconBox>
+                    <GlowingIcon title='NodeJS' glowColor={styleVariables.colorNodeJS} strokeWidth={4}>
+                        <NodejsLogo />
                     </GlowingIcon>
                 </IconBox>
                 <IconBox>
@@ -100,21 +120,8 @@ const SkillsSection = () => {
                     </GlowingIcon>
                 </IconBox>
                 <IconBox>
-                    <GlowingIcon title='NodeJS' glowColor={styleVariables.colorNodeJS} strokeWidth={4}>
-                        <NodejsLogo />
-                    </GlowingIcon>
-                </IconBox>
-                <IconBox>
                     <GlowingIcon title='Firebase' glowColor={styleVariables.colorFirebase} strokeWidth={4}>
                         <FirebaseLogo />
-                    </GlowingIcon>
-                </IconBox>
-            </IconRow>
-            <IconRow>
-                <SubSubsectionTitle element='h4'>Libraries</SubSubsectionTitle>
-                <IconBox>
-                    <GlowingIcon title='MUI' glowColor={styleVariables.colorMaterialUI}>
-                        <MaterialUILogo />
                     </GlowingIcon>
                 </IconBox>
             </IconRow>

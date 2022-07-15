@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import styles from "../../styles/modules/AboutMeSection.module.scss";
 import styleVariables from "../../styles/variables.module.scss";
 import { motion, AnimatePresence } from "framer-motion";
-import { EmailSharp, GitHub, Instagram, LinkedIn } from "@mui/icons-material";
 import { useInView } from "react-intersection-observer";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { NavLink } from "../elements/styledComponents";
@@ -33,13 +32,6 @@ const variants = {
             y: { stiffness: 1000 },
         },
     },
-};
-
-const contactLinkStyling = {
-    alignItems: "center",
-    color: "var(--color-yellow)",
-    display: "flex",
-    gap: "10px",
 };
 
 const FadeDownText = ({ children, motionKey }) => {
@@ -129,12 +121,13 @@ const AboutMeSection = () => {
                                     </FadeDownText>
                                     <FadeDownText motionKey='fd-text-education-0-0'>
                                         <p className={styles.datedLine}>
-                                            Queen's University - Kingston, Ontario{" "}
-                                            <span className='date'>09/2012 - 04/2016</span>
+                                            Queen&apos;s University - Kingston, Ontario{" "}
+                                            <span className={styles.date}>09/2012 - 04/2016</span>
                                         </p>
                                         <NavLink
                                             href='https://www.queensu.ca/artsci/programs-and-degrees/natural-physical-sciences/life-sciences'
                                             target='_blank'
+                                            rel='noopener noreferrer'
                                             styling={{
                                                 marginLeft: "2em",
                                                 marginBottom: "2em",
@@ -145,12 +138,13 @@ const AboutMeSection = () => {
                                     </FadeDownText>
                                     <FadeDownText motionKey='fd-text-education-0-1'>
                                         <p className={styles.datedLine}>
-                                            Queen's University - Kingston, Ontario
-                                            <span className='date'>09/2016 - 04/2019</span>
+                                            Queen&apos;s University - Kingston, Ontario
+                                            <span className={styles.date}>09/2016 - 04/2019</span>
                                         </p>
                                         <NavLink
                                             href='https://www.cs.queensu.ca/undergraduate/programs/specializations/biomedical-computing.php'
                                             target='_blank'
+                                            rel='noopener noreferrer'
                                             styling={{
                                                 marginLeft: "2em",
                                                 marginBottom: "2em",
@@ -171,50 +165,73 @@ const AboutMeSection = () => {
                                         </SubsectionTitle>
                                     </FadeDownText>
                                     <FadeDownText motionKey='fd-text-title-whats-next-0'>
-                                        <SubsectionTitle styling={{ textAlign: "left" }}>What's Next?</SubsectionTitle>
+                                        <SubsectionTitle styling={{ textAlign: "left" }}>
+                                            What&apos;s Next?
+                                        </SubsectionTitle>
                                     </FadeDownText>
                                     <FadeDownText motionKey='fd-text-whats-next-0-0'>
                                         <p>
-                                            I'm always looking to learn new things. For the near future, I've got my eye
-                                            on:
+                                            I&apos;m always looking to learn new things. For the near future, I&apos;ve
+                                            got my eye on:
                                         </p>
                                     </FadeDownText>
                                     <FadeDownText motionKey='fd-text-whats-next-0-1'>
-                                        <ul>
+                                        <ul className='haloList'>
                                             <li>
-                                                <NavLink href='https://graphql.org/' target='_blank'>
+                                                <NavLink
+                                                    href='https://www.typescriptlang.org/'
+                                                    target='_blank'
+                                                    rel='noopener noreferrer'
+                                                >
+                                                    TypeScript
+                                                </NavLink>{" "}
+                                                for type-safe, more easily collaborative and refactorable code
+                                            </li>
+                                            <li>
+                                                <NavLink
+                                                    href='https://graphql.org/'
+                                                    target='_blank'
+                                                    rel='noopener noreferrer'
+                                                >
                                                     GraphQL
                                                 </NavLink>{" "}
                                                 for more efficient and flexible APIs
                                             </li>
                                             <li>
-                                                <NavLink href='https://nextjs.org/' target='_blank'>
-                                                    Next.js
-                                                </NavLink>{" "}
-                                                for Server-Side Rendering (SSR) and Static Site Generation (SSG)
-                                            </li>
-                                            <li>
-                                                <NavLink href='https://svelte.dev/' target='_blank'>
+                                                <NavLink
+                                                    href='https://svelte.dev/'
+                                                    target='_blank'
+                                                    rel='noopener noreferrer'
+                                                >
                                                     Svelte
                                                 </NavLink>{" "}
                                                 - embrace the excitement of{" "}
                                                 <NavLink
                                                     href='https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-web-frameworks'
                                                     target='_blank'
+                                                    rel='noopener noreferrer'
                                                 >
                                                     this most beloved new framework
                                                 </NavLink>
                                             </li>
                                             <li>
-                                                <NavLink href='https://kit.svelte.dev/' target='_blank'>
+                                                <NavLink
+                                                    href='https://kit.svelte.dev/'
+                                                    target='_blank'
+                                                    rel='noopener noreferrer'
+                                                >
                                                     SvelteKit
                                                 </NavLink>{" "}
                                                 for Svelte SSR and SSG
                                             </li>
                                             <li>
                                                 Completion of{" "}
-                                                <NavLink href='https://threejs-journey.com/' target='_blank'>
-                                                    Bruno Simon's Three.js Journey
+                                                <NavLink
+                                                    href='https://threejs-journey.com/'
+                                                    target='_blank'
+                                                    rel='noopener noreferrer'
+                                                >
+                                                    Bruno Simon&apos;s Three.js Journey
                                                 </NavLink>{" "}
                                                 to bring my love of 3D modelling and art into the browser
                                             </li>
@@ -222,6 +239,7 @@ const AboutMeSection = () => {
                                                 <NavLink
                                                     href='https://docs.pmnd.rs/react-three-fiber/getting-started/introduction'
                                                     target='_blank'
+                                                    rel='noopener noreferrer'
                                                 >
                                                     React Three Fiber
                                                 </NavLink>{" "}
@@ -231,6 +249,7 @@ const AboutMeSection = () => {
                                                 <NavLink
                                                     href='https://www.blender.org/download/releases/3-1/'
                                                     target='_blank'
+                                                    rel='noopener noreferrer'
                                                 >
                                                     Blender 3
                                                 </NavLink>{" "}
@@ -240,6 +259,7 @@ const AboutMeSection = () => {
                                                 <NavLink
                                                     href='https://www.unrealengine.com/en-US/unreal-engine-5'
                                                     target='_blank'
+                                                    rel='noopener noreferrer'
                                                 >
                                                     Unreal Engine 5
                                                 </NavLink>{" "}
@@ -254,7 +274,9 @@ const AboutMeSection = () => {
                                         <SubsectionTitle styling={{ textAlign: "left" }}>Education</SubsectionTitle>
                                     </FadeDownText>
                                     <FadeDownText motionKey='fd-text-education-1-0'>
-                                        <p>I attended Queen's University in Kingston, Ontario from 2012 to 2019.</p>
+                                        <p>
+                                            I attended Queen&apos;s University in Kingston, Ontario from 2012 to 2019.
+                                        </p>
                                     </FadeDownText>
                                     <FadeDownText motionKey='fd-text-education-1-1'>
                                         <p>
@@ -262,6 +284,7 @@ const AboutMeSection = () => {
                                             <NavLink
                                                 href='https://www.queensu.ca/artsci/programs-and-degrees/natural-physical-sciences/life-sciences'
                                                 target='_blank'
+                                                rel='noopener noreferrer'
                                             >
                                                 BScH in Life Sciences
                                             </NavLink>
@@ -270,7 +293,7 @@ const AboutMeSection = () => {
                                             falling in love with programming. Finding myself completely engrossed, the
                                             time slipping-by unnoticed as I became enthralled by writing and piecing
                                             together functions to build small programs. I had studied neurotransmitters,
-                                            but learning about them hadn't quite given me the dopamine-rush that
+                                            but learning about them hadn&apos;t quite given me the dopamine-rush that
                                             squashing that last bug and having a working final product did. So, in my
                                             last year of that degree, I decided I needed to change course and pursue a
                                             career in software development.
@@ -278,17 +301,18 @@ const AboutMeSection = () => {
                                     </FadeDownText>
                                     <FadeDownText motionKey='fd-text-education-1-2'>
                                         <p>
-                                            Queen's offered an Honours degree in Computing with a Biomedical Computing
-                                            specialization. I saw this as a great oppurtunity to combine my previous
-                                            love with my new passion, and to contextualize and reinforce my new learning
-                                            with past domain-knowledge. For the next three years, I took primarily
-                                            computer science courses focused on algorithms, data-structures, and
-                                            programming paradigms, as well as a few with cool life science inflections
-                                            (Bioinformatics and Computer-Integrated Surgery come to mind). In 2019, I
-                                            graduated with a{" "}
+                                            Queen&apos;s offered an Honours degree in Computing with a Biomedical
+                                            Computing specialization. I saw this as a great oppurtunity to combine my
+                                            previous love with my new passion, and to contextualize and reinforce my new
+                                            learning with past domain-knowledge. For the next three years, I took
+                                            primarily computer science courses focused on algorithms, data-structures,
+                                            and programming paradigms, as well as a few with cool life science
+                                            inflections (Bioinformatics and Computer-Integrated Surgery come to mind).
+                                            In 2019, I graduated with a{" "}
                                             <NavLink
                                                 href='https://www.cs.queensu.ca/undergraduate/programs/specializations/biomedical-computing.php'
                                                 target='_blank'
+                                                rel='noopener noreferrer'
                                             >
                                                 BCmpH in Biomedical Computing
                                             </NavLink>
@@ -300,13 +324,15 @@ const AboutMeSection = () => {
                                             Skills and Projects
                                         </SubsectionTitle>
                                         <p>
-                                            <NavLink href='#skills-section'>They're right above this</NavLink>, in case
-                                            you somehow missed them. I'm not being snide, they just took some effort to
-                                            put together so I'm shamelessly redirecting you there.
+                                            <NavLink href='#skills-section'>They&apos;re right above this</NavLink>, in
+                                            case you somehow missed them. I&apos;m not being snide, they just took some
+                                            effort to put together so I&apos;m shamelessly redirecting you there.
                                         </p>
                                     </FadeDownText>
                                     <FadeDownText motionKey='fd-text-title-whats-next-1'>
-                                        <SubsectionTitle styling={{ textAlign: "left" }}>What's Next?</SubsectionTitle>
+                                        <SubsectionTitle styling={{ textAlign: "left" }}>
+                                            What&apos;s Next?
+                                        </SubsectionTitle>
                                     </FadeDownText>
                                     <FadeDownText motionKey='fd-text-whats-next-1-0'>
                                         <p>
@@ -317,44 +343,67 @@ const AboutMeSection = () => {
                                     </FadeDownText>
                                     <FadeDownText motionKey='fd-text-whats-next-1-1'>
                                         <p>
-                                            Two of the most immediate skills I'll be acquiring are{" "}
-                                            <NavLink href='https://graphql.org/' target='_blank'>
+                                            Two of the most immediate skills I&apos;ll be acquiring are{" "}
+                                            <NavLink
+                                                href='https://www.typescriptlang.org/'
+                                                target='_blank'
+                                                rel='noopener noreferrer'
+                                            >
+                                                TypeScript
+                                            </NavLink>{" "}
+                                            and
+                                            <NavLink
+                                                href='https://graphql.org/'
+                                                target='_blank'
+                                                rel='noopener noreferrer'
+                                            >
                                                 GraphQL
                                             </NavLink>{" "}
-                                            and{" "}
-                                            <NavLink href='https://nextjs.org/' target='_blank'>
-                                                Next.js
-                                            </NavLink>{" "}
-                                            to modernize my API-querying skills and to reap all of the benefits that
-                                            come with Server-Side Rendering / statically generating my React
-                                            applications.
+                                            to modernize my JavaScript writing and API-querying skills. I&apos;m looking
+                                            forward to learning how to make my JavaScript code more type-safe,
+                                            shareable, and refactorable, and similarly how to make my API quesries more
+                                            type-safe, but also flexible and light-weight.
                                         </p>
                                     </FadeDownText>
                                     <FadeDownText motionKey='fd-text-whats-next-1-2'>
                                         <p>
                                             I have also heard really good things about{" "}
-                                            <NavLink href='https://svelte.dev/' target='_blank'>
+                                            <NavLink
+                                                href='https://svelte.dev/'
+                                                target='_blank'
+                                                rel='noopener noreferrer'
+                                            >
                                                 Svelte
                                             </NavLink>{" "}
                                             and{" "}
-                                            <NavLink href='https://kit.svelte.dev/' target='_blank'>
+                                            <NavLink
+                                                href='https://kit.svelte.dev/'
+                                                target='_blank'
+                                                rel='noopener noreferrer'
+                                            >
                                                 SvelteKit
                                             </NavLink>{" "}
                                             from former predominantly-React developers, so want to give that a shot as
-                                            the buzz around is that it's the next big framework.
+                                            the buzz around is that it&apos;s the next big framework.
                                         </p>
                                     </FadeDownText>
                                     <FadeDownText motionKey='fd-text-whats-next-1-3'>
                                         <p>
                                             On the more fun and purely-aesthetic side of things, I am enrolled in{" "}
-                                            <NavLink href='https://threejs-journey.com/' target='_blank'>
-                                                Bruno Simon's Three.js Journey
+                                            <NavLink
+                                                href='https://threejs-journey.com/'
+                                                target='_blank'
+                                                rel='noopener noreferrer'
+                                            >
+                                                Bruno Simon&apos;s Three.js Journey
                                             </NavLink>{" "}
-                                            course to learn to master 3D visuals and animations in JavaScript. I'm sure
-                                            following that I'll want to learn how to integrate it into React using{" "}
+                                            course to learn to master 3D visuals and animations in JavaScript. I&apos;m
+                                            sure following that I&apos;ll want to learn how to integrate it into React
+                                            using{" "}
                                             <NavLink
                                                 href='https://docs.pmnd.rs/react-three-fiber/getting-started/introduction'
                                                 target='_blank'
+                                                rel='noopener noreferrer'
                                             >
                                                 React Three Fiber
                                             </NavLink>
@@ -362,6 +411,7 @@ const AboutMeSection = () => {
                                             <NavLink
                                                 href='https://www.blender.org/download/releases/3-1/'
                                                 target='_blank'
+                                                rel='noopener noreferrer'
                                             >
                                                 Blender 3
                                             </NavLink>{" "}
@@ -369,46 +419,19 @@ const AboutMeSection = () => {
                                             <NavLink
                                                 href='https://www.unrealengine.com/en-US/unreal-engine-5'
                                                 target='_blank'
+                                                rel='noopener noreferrer'
                                             >
                                                 Unreal Engine 5
                                             </NavLink>{" "}
-                                            just came out, and I'm super-excited to lose myself for a while learning and
-                                            playing around with those to explore my 3D modelling and art hobby.
+                                            just came out, and I&apos;m super-excited to lose myself for a while
+                                            learning and playing around with those to explore my 3D modelling and art
+                                            hobby.
                                         </p>
                                     </FadeDownText>
                                 </>
                             )}
                         </AnimatePresence>
                     </TextContainer>
-                    <SectionTitle element='h3' id='contact-section'>
-                        Contact
-                    </SectionTitle>
-                    <div className={styles.contactColumn}>
-                        <NavLink href='mailto:ruse.marshall@gmail.com' target='_blank' styling={contactLinkStyling}>
-                            <EmailSharp />
-                            ruse.marshall@gmail.com
-                        </NavLink>
-                        <NavLink href='https://github.com/MarshallRuse' target='_blank' styling={contactLinkStyling}>
-                            <GitHub />
-                            MarshallRuse
-                        </NavLink>
-                        <NavLink
-                            href='https://www.linkedin.com/in/marshall-ruse/'
-                            target='_blank'
-                            styling={contactLinkStyling}
-                        >
-                            <LinkedIn />
-                            marshall-ruse
-                        </NavLink>
-                        <NavLink
-                            href='https://www.instagram.com/marshy_roses/'
-                            target='_blank'
-                            styling={contactLinkStyling}
-                        >
-                            <Instagram />
-                            marshy_roses
-                        </NavLink>
-                    </div>
                 </div>
             </div>
         </section>

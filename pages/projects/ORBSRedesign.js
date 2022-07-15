@@ -60,12 +60,12 @@ const carouselImages = [
 const BackgroundInfo = () => (
     <>
         <p>
-            <NavLink href='https://www.orbs.utoronto.ca/' target='_blank'>
+            <NavLink href='https://www.orbs.utoronto.ca/' target='_blank' rel='noopener noreferrer'>
                 ORBS (Online Rotation & Base Hospital Scheduling)
             </NavLink>{" "}
             is a resident scheduling software for the{" "}
-            <NavLink href='https://deptmedicine.utoronto.ca/' target='_blank'>
-                University of Toronto's Department of Medicine
+            <NavLink href='https://deptmedicine.utoronto.ca/' target='_blank' rel='noopener noreferrer'>
+                University of Toronto&apos;s Department of Medicine
             </NavLink>
             . Prior to 2020 the application was almost exclusively used by the Internal Medicine program, but it was
             decided that the system should be expanded to for use by the whole department, and, along with that, came a
@@ -86,7 +86,7 @@ const FeaturesInfo = () => (
         <ol>
             <li>
                 Rotations exported from the{" "}
-                <NavLink href='https://www.orbs.utoronto.ca/' target='_blank'>
+                <NavLink href='https://www.orbs.utoronto.ca/' target='_blank' rel='noopener noreferrer'>
                     Online Rotation & Base Hospital Scheduling (ORBS)
                 </NavLink>
             </li>
@@ -94,10 +94,10 @@ const FeaturesInfo = () => (
             <li>A reference table for the EPAs to be completed on the rotations listed in the rotations file.</li>
         </ol>
         <p>The residents in the first input are grouped by:</p>
-        <ul>
+        <ul className='haloList'>
             <li>the rotation</li>
             <li>the hospital the roation is taking place at</li>
-            <li>the residents' seniority (i.e. Juniors or Seniors)</li>
+            <li>the residents&apos; seniority (i.e. Juniors or Seniors)</li>
         </ul>
         <p>Four tables are produced:</p>
         <ol>
@@ -144,41 +144,46 @@ const DevelopmentInfo = () => (
         <SubSubsectionTitle>Front-End</SubSubsectionTitle>
         <p>
             The React front-end utilizes components from{" "}
-            <NavLink href='https://mui.com/' target='_blank'>
+            <NavLink href='https://mui.com/' target='_blank' rel='noopener noreferrer'>
                 MUI v5
             </NavLink>
             , a component library implementing Google’s Material Design visual language. Custom styling in keeping with
             <NavLink
                 href='https://www.utm.utoronto.ca/communications/sites/files/communications/public/shared/UofT%20Style%20Guide%20%2B%20Boundless%20Guide%20Feb%202012.pdf'
                 target='_blank'
+                rel='noopener noreferrer'
             >
-                the University of Toronto's Visual Identity Style Guide
+                the University of Toronto&apos;s Visual Identity Style Guide
             </NavLink>{" "}
             is implemented using{" "}
-            <NavLink href='https://mui.com/material-ui/guides/styled-engine/#main-content' target='_blank'>
-                MUI's emotion CSS-in-JS API
+            <NavLink
+                href='https://mui.com/material-ui/guides/styled-engine/#main-content'
+                target='_blank'
+                rel='noopener noreferrer'
+            >
+                MUI&apos;s emotion CSS-in-JS API
             </NavLink>
             .
         </p>
         <p>
             A React implementation of the{" "}
-            <NavLink href='https://www.papaparse.com/' target='_blank'>
+            <NavLink href='https://www.papaparse.com/' target='_blank' rel='noopener noreferrer'>
                 Papaparse
             </NavLink>{" "}
             in-browser CSV parsing library,{" "}
-            <NavLink href='https://www.npmjs.com/package/react-papaparse' target='_blank'>
+            <NavLink href='https://www.npmjs.com/package/react-papaparse' target='_blank' rel='noopener noreferrer'>
                 react-papaparse v3
             </NavLink>
             , is used to parse the uploaded CSVs. Data grouping, filtering, and formatting are done with custom
             functions acting on the data held in React state hooks, which are then fed to components wrapping{" "}
-            <NavLink href='https://mui.com/x/react-data-grid/' target='_blank'>
-                MUI's DataGrid
+            <NavLink href='https://mui.com/x/react-data-grid/' target='_blank' rel='noopener noreferrer'>
+                MUI&apos;s DataGrid
             </NavLink>{" "}
             component.
         </p>
         <p>
             Animations are accomplished using{" "}
-            <NavLink href='https://www.framer.com/motion/' target='_blank'>
+            <NavLink href='https://www.framer.com/motion/' target='_blank' rel='noopener noreferrer'>
                 Framer Motion
             </NavLink>
         </p>

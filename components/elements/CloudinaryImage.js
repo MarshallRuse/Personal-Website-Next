@@ -9,7 +9,7 @@ const CloudinaryImage = ({
     height,
     width,
     backgroundImage,
-    className,
+    className = "",
     styling,
     placeholderType = "pixelate",
 }) => {
@@ -32,12 +32,12 @@ const CloudinaryImage = ({
             width={width}
             cldImg={myImage}
             plugins={[
-                lazyload({ rootMargin: "100px 20px 100px 20px", threshold: 0.01 }),
+                lazyload({ rootMargin: "1000px 20px 1000px 20px", threshold: 0.01 }),
                 responsive({ steps: 200 }),
                 placeholder({ mode: placeholderType }),
             ]}
             className={`${backgroundImage && styles.backgroundImage} ${className && className}`}
-            style={styling}
+            style={{ maxWidth: "100%", ...styling }}
         />
     );
 };

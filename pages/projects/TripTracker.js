@@ -70,7 +70,7 @@ const FeaturesInfo = () => (
         <p>
             For each expense, a user may enter a number of metrics, a few of which are required for summarizing actions.
         </p>
-        <ul>
+        <ul className='haloList'>
             <li>
                 <em>Expense Title (Optional)</em> - a quick descriptor of the expense.
             </li>
@@ -91,7 +91,7 @@ const FeaturesInfo = () => (
                 <em>
                     Currency <strong>(Required)</strong>
                 </em>{" "}
-                - the original currency the expense was paid in. Defaults to the trip's preferred currency.
+                - the original currency the expense was paid in. Defaults to the trip&apos;s preferred currency.
             </li>
             <li>
                 <em>Payment Method (Optional)</em> - the means of transaction (ie. cash, debit, credit, etc.).
@@ -108,7 +108,7 @@ const FeaturesInfo = () => (
             <li>
                 <em>Location</em> - Where the expense occurred. Use Google Places search input to autocomplete the
                 fields.
-                <ul>
+                <ul className='haloList'>
                     <li>
                         <em>Business (Optional)</em> - The business the transaction occurred with.
                     </li>
@@ -144,7 +144,7 @@ const FeaturesInfo = () => (
             <br />
             The summary also contains other interesting metrics, such as:
         </p>
-        <ul>
+        <ul className='haloList'>
             <li>total number of expenses,</li>
             <li>the average expense value,</li>
             <li>the number of expenses per day,</li>

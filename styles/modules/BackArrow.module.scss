@@ -1,0 +1,38 @@
+@use "../variables.module.scss" as *;
+
+@keyframes outline {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.backArrowWrapper {
+    position: fixed;
+    top: 8vh;
+    left: 8vw;
+    z-index: 2;
+
+    @media (min-width: $breakpoint-md) {
+        top: 16vh;
+        left: 8vw;
+    }
+
+    & a {
+        color: #fff;
+    }
+
+    & svg {
+        filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.4));
+        stroke: var(--color-blue-light);
+        stroke-width: 0.75;
+        stroke-dasharray: 69px;
+        stroke-dashoffset: 69px;
+        transform: scale(1.5);
+    }
+
+    &:hover svg,
+    &:focus svg {
+        filter: drop-shadow(2px 4px 3px rgba(var(--color-blue-light-raw), 0.5));
+        animation: outline 0.3s ease-out forwards;
+    }
+}

@@ -48,10 +48,10 @@ const carouselImages = [
 
 const BackgroundInfo = () => (
     <p>
-        I've used a number of different workout logging apps (and even physical workout journals, once upon a time),
-        and, while they all have their pros and cons, they’ve never been quite perfect for me. Situations like needing
-        to easily identify which side of the body some exercises were performed on, or being able to switch easily
-        between weights in pounds and kilos, often require cumbersome workarounds. Its been a goal of mine since
+        I&apos;ve used a number of different workout logging apps (and even physical workout journals, once upon a
+        time), and, while they all have their pros and cons, they’ve never been quite perfect for me. Situations like
+        needing to easily identify which side of the body some exercises were performed on, or being able to switch
+        easily between weights in pounds and kilos, often require cumbersome workarounds. Its been a goal of mine since
         beginning my web-development journey to build an app that fits my needs on a day-to-day basis. This app is (the
         beginning of) my attempt to craft that myself.
     </p>
@@ -68,7 +68,7 @@ const FeaturesInfo = () => (
             <br />
             The list of current features include:
         </p>
-        <ul>
+        <ul className='haloList'>
             <li>Add to and customize a provided list of exercises, sorted by muscle group.</li>
             <li>
                 Distinguish between unilateral and bilateral exercises, tracking the weight and reps for each side of
@@ -80,7 +80,7 @@ const FeaturesInfo = () => (
             </li>
         </ul>
         <p>The list of planned features include:</p>
-        <ul>
+        <ul className='haloList'>
             <li>
                 View your previous workouts stats for each exercise, per set, on its sets-page, to immediately know your
                 goal to beat.
@@ -120,7 +120,7 @@ const DevelopmentInfo = () => (
             </IconBox>
         </IconRow>
         <p>
-            <em>Workout Logger</em> is developed as a <strong>React</strong> app using Google's{" "}
+            <em>Workout Logger</em> is developed as a <strong>React</strong> app using Google&apos;s{" "}
             <strong>Firebase</strong> web and mobile platform as a backend for authentication and storage (
             <strong>Cloud Firestore</strong>).
         </p>
@@ -139,10 +139,10 @@ const DevelopmentInfo = () => (
         <SubSubsectionTitle>Back-End</SubSubsectionTitle>
         <p>
             The back-end is a bare-bones <strong>Node.js</strong> server that returns the index.html file from any
-            location, making <em>Workout Logger </em>a single-page application. Google's <strong>Firebase</strong> web
-            and mobile development service is used for the authentication middleware, and for storage via their{" "}
+            location, making <em>Workout Logger </em>a single-page application. Google&apos;s <strong>Firebase</strong>{" "}
+            web and mobile development service is used for the authentication middleware, and for storage via their{" "}
             <strong>Cloud Firestore</strong> service. The services are interacted with directly from the front-end, with
-            the component pages and elements using Firebase's web and mobile client SDK. The data structure of the
+            the component pages and elements using Firebase&apos;s web and mobile client SDK. The data structure of the
             Firestore storage is a combination of the <em>subcollection</em> and <em>root-level collection</em> patterns
             <a
                 href='https://firebase.google.com/docs/firestore/manage-data/structure-data'

@@ -72,7 +72,7 @@ const BackgroundInfo = () => (
     <>
         <p>
             Snazzy Stock is an in-development inventory management app for{" "}
-            <NavLink href='https://www.snazzystones.ca' target='_blank'>
+            <NavLink href='https://www.snazzystones.ca' target='_blank' rel='noopener noreferrer'>
                 Snazzy Stones Jewellery
             </NavLink>
             , a small retail business.
@@ -80,11 +80,11 @@ const BackgroundInfo = () => (
         <p>
             Snazzy Stones currently tracks inventory via hand-written records (for in-person sales) cross-referenced
             with Woocommerce sales records (
-            <NavLink href='https://snazzystones.ca/' target='_blank'>
+            <NavLink href='https://snazzystones.ca/' target='_blank' rel='noopener noreferrer'>
                 for website sales
             </NavLink>
             ) and Etsy CSV exports (
-            <NavLink href='https://www.etsy.com/ca/shop/SnazzyStonesJewelry' target='_blank'>
+            <NavLink href='https://www.etsy.com/ca/shop/SnazzyStonesJewelry' target='_blank' rel='noopener noreferrer'>
                 for Etsy sales
             </NavLink>
             ). The idea behind Snazzy Stock is to have one unified platform into which all records of sale or purchase
@@ -96,12 +96,12 @@ const BackgroundInfo = () => (
 const FeaturesInfo = () => (
     <>
         <p>
-            The app currently contains a rudimentary cart functionality, which doesn't accept payments, but does
+            The app currently contains a rudimentary cart functionality, which doesn&apos;t accept payments, but does
             automatically update the inventor of pre-loaded products, which can be quickly identified via an
-            autocomplete search of product name or SKU. Barcode-tagged products can be scanned with the device's camera
-            for automatic product acquisition. Future versions of the app will integrate with{" "}
-            <NavLink href='https://squareup.com/ca/en/app' target='_blank'>
-                Square's
+            autocomplete search of product name or SKU. Barcode-tagged products can be scanned with the device&apos;s
+            camera for automatic product acquisition. Future versions of the app will integrate with{" "}
+            <NavLink href='https://squareup.com/ca/en/app' target='_blank' rel='noopener noreferrer'>
+                Square&apos;s
             </NavLink>{" "}
             API to automatically generate a subtotal to be charged with in-person sales using the Square terminal.{" "}
         </p>
@@ -154,22 +154,22 @@ const DevelopmentInfo = () => (
         </IconRow>
         <p>
             Snazzy Stock is built with a React front-end, using{" "}
-            <NavLink href='https://v4.mui.com/getting-started/installation/' target='_blank'>
+            <NavLink href='https://v4.mui.com/getting-started/installation/' target='_blank' rel='noopener noreferrer'>
                 Material UI
             </NavLink>{" "}
             as its a component library.
         </p>
         <p>
             CSV uploads of purchase orders and sales data are parsed into JSON with{" "}
-            <NavLink href='https://www.npmjs.com/package/react-papaparse' target='_blank'>
+            <NavLink href='https://www.npmjs.com/package/react-papaparse' target='_blank' rel='noopener noreferrer'>
                 react-papaparse
             </NavLink>
             . Analytics charts are built with{" "}
-            <NavLink href='https://www.npmjs.com/package/react-chartjs-2' target='_blank'>
+            <NavLink href='https://www.npmjs.com/package/react-chartjs-2' target='_blank' rel='noopener noreferrer'>
                 react-chartjs-2
             </NavLink>
             , and date manipulation is accomplished using{" "}
-            <NavLink href='https://day.js.org/' target='_blank'>
+            <NavLink href='https://day.js.org/' target='_blank' rel='noopener noreferrer'>
                 dayjs
             </NavLink>
             .

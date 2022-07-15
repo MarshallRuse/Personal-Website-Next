@@ -6,23 +6,19 @@
     }
 }
 
-.svgWrapper {
+.heroWrapper {
     overflow: hidden;
     position: relative;
 }
 
-.animatedSVG {
+.bgImage {
     position: absolute;
+    top: 0;
+    left: 0;
     min-height: 100vh;
-
-    @media (max-width: $breakpoint-sm) {
-        transform: translateX(-38%);
-    }
-
-    & image {
-        opacity: 0;
-        animation: fadeIn 1s ease-in 1.5s forwards;
-    }
+    opacity: 0;
+    width: 100%;
+    animation: fadeIn 1s ease-in 1.5s forwards;
 }
 
 .colorBackground {

@@ -30,6 +30,7 @@ export const NavLink = forwardRef(({ color = "var(--color-yellow)", children, st
         {children}
     </a>
 ));
+NavLink.displayName = "NavLink";
 
 export const IconRow = ({ styling, children, ...rest }) => (
     <div className={styles.iconRow} style={{ ...styling }} {...rest}>

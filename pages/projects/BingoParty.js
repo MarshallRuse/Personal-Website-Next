@@ -36,7 +36,7 @@ const BackgroundInfo = () => (
             written entirely from pure HTML and CSS, without any UI libraries, and, truthfully, is only functional as a
             desktop app, as I did not have mobile development in mind as I developed it. Attempts to retrofit it later
             as a mobile app with an abundance of media-queries and new components proved too time consuming for what I
-            consider an introductory project, and I've chalked it up to a learning experience. All projects from
+            consider an introductory project, and I&apos;ve chalked it up to a learning experience. All projects from
             here-on-out are to have mobile layout in mind, if not developed in a mobile-first context.
         </p>
         <p>
@@ -45,8 +45,8 @@ const BackgroundInfo = () => (
             the hood of the UI Library components (tabs, expanse panels, menus, modals, etc.) that I now plug in and use
             in a fraction of the time. Users have the capability of uploading their own images for avatars and cover
             photos, and of editing them before saving to ensure they are of the proper dimensions. Users are able to
-            engage in a a functioning upvote/downvote system for the games, be ranked by their game's collective votes,
-            and follow and be followed by each other, which I thought was pretty neat to implement.
+            engage in a a functioning upvote/downvote system for the games, be ranked by their game&apos;s collective
+            votes, and follow and be followed by each other, which I thought was pretty neat to implement.
         </p>
     </>
 );
@@ -113,8 +113,8 @@ const DevelopmentInfo = () => (
         <p>
             The React front-end uses components written in HTML and CSS (compiled from Sass). The front-end uses{" "}
             <strong>Redux</strong> (modified for persistence across page-refreshes) for authentication on sign-up and
-            login, as well as to fetch the user's games. Redux-thunk was used to dispatch asynchronous actions from the
-            front-end, such as updating the user's followers and followings. Bingo Party is a{" "}
+            login, as well as to fetch the user&apos;s games. Redux-thunk was used to dispatch asynchronous actions from
+            the front-end, such as updating the user&apos;s followers and followings. Bingo Party is a{" "}
             <strong>single-page application</strong>, as it uses <strong>React Router</strong> as its routing solution,
             only fetching the index HTML page on initial loading.
         </p>

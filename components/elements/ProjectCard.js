@@ -89,7 +89,7 @@ const ProjectCard = (props) => {
                         data-augmented-ui='all-hex border'
                         style={{ "--aug-all-width": `${calcIconWidth()}px` }}
                     >
-                        <Image src={item.icon} width={100} height={100} />
+                        <Image src={item.icon} width={100} height={100} alt={`Icon for ${item.class}`} />
                     </div>
                 ))}
             </div>

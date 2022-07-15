@@ -126,6 +126,7 @@
     --aug-inlay-bg: linear-gradient(300deg, var(--color-pink) -9.08%, var(--color-purple) 83.6%);
     grid-area: card-action-demo;
     z-index: 2;
+    text-shadow: 1px 1px var(--color-pink);
     transform: translateZ(20px);
 }
 
@@ -136,6 +137,7 @@
     --aug-inlay-bg: linear-gradient(300deg, var(--color-blue-light) -9.08%, var(--color-blue-mid) 83.6%);
     grid-area: card-action-source;
     z-index: 2;
+    text-shadow: 1px 1px var(--color-blue-light);
     transform: translateZ(20px);
 }
 
@@ -240,4 +242,9 @@
 .stackIconWrapper.styledcomponents {
     --aug-border-bg: var(--color-styledcomponents);
     background: linear-gradient(150deg, transparent, rgba(var(--color-styledcomponents-raw), 0.5));
+}
+
+.stackIconWrapper.tailwindcss {
+    --aug-border-bg: var(--color-tailwindcss);
+    background: linear-gradient(150deg, transparent, rgba(var(--color-tailwindcss-raw), 0.5));
 }

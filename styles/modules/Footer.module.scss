@@ -1,0 +1,49 @@
+@use "../variables.module.scss" as *;
+
+.footer {
+    align-items: center;
+    background-color: rgba(var(--color-blue-dark-raw, 0.5));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 40px 25px 80px;
+}
+
+.footerHeader {
+    font-size: 3rem;
+    flex-shrink: 1;
+}
+
+.contactColumn {
+    align-items: center;
+    display: grid;
+    flex-direction: column;
+    flex-grow: 1;
+    font-size: 1.5em;
+    gap: 40px;
+    margin: 0 auto;
+    width: min-content;
+
+    a {
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: $breakpoint-sm) {
+        grid-template-columns: 1fr 1fr;
+
+        a {
+            margin: 0;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-xl) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.copyright {
+    color: #fff;
+    font-family: "Jura", sans-serif;
+    grid-column: 1 / -1;
+    text-align: center;
+}

@@ -139,6 +139,7 @@ const ProjectsSection = () => (
                         cardTitle='marshallruse.com'
                         cardTitleStyling={{ fontSize: "32px" }}
                         cardSubtitle='This website!'
+                        projectPageLink='/projects/ThisWebsite'
                         sourceLink='https://github.com/MarshallRuse/Personal-Website'
                         stackIcons={[
                             { class: "react", icon: "/svgs/logos/react.svg" },
