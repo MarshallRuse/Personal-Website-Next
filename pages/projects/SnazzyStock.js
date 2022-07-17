@@ -193,6 +193,15 @@ export default function SnazzyStock() {
             developmentInfo={<DevelopmentInfo />}
             developmentBackgroundImage=''
             developmentBackgroundImageSmallScreenAlt=''
+            openGraphImages={[
+                {
+                    url: "https://res.cloudinary.com/marsh/image/upload/v1650284528/portfolio/SnazzyStock/salesPage.png",
+                    width: 1902,
+                    height: 861,
+                    alt: "The sales-tracking page of the Snazzy Stock app",
+                    type: "image/png",
+                },
+            ]}
         />
     );
 }

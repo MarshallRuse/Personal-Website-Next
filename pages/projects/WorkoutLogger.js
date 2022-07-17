@@ -175,6 +175,15 @@ export default function WorkoutLogger() {
             developmentBackgroundImage='WorkoutLogger/workoutBackground'
             developmentBackgroundImageSmallScreenAlt='WorkoutLogger/curlBackground'
             developmentInfo={<DevelopmentInfo />}
+            openGraphImages={[
+                {
+                    url: "https://res.cloudinary.com/marsh/image/upload/v1649329949/portfolio/WorkoutLogger/WorkoutLoggerExerciseCreation.png",
+                    width: 565,
+                    height: 1133,
+                    alt: "An exercise being added to the database",
+                    type: "image/png",
+                },
+            ]}
         />
     );
 }

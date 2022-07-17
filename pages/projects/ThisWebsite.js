@@ -196,6 +196,15 @@ export default function ThisWebsite() {
             developmentBackgroundImage='ThisWebsite/development'
             developmentBackgroundImageSmallScreenAlt=''
             developmentInfo={<DevelopmentInfo />}
+            openGraphImages={[
+                {
+                    url: "/images/ThisWebsite/header.png",
+                    width: 1891,
+                    height: 888,
+                    alt: "Header section of marshallruse.com",
+                    type: "image/png",
+                },
+            ]}
         />
     );
 }

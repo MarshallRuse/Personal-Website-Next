@@ -64,6 +64,23 @@ const ProjectsSection = () => (
                 </div>
                 <div className={`flexItem ${styles.projectBox}`}>
                     <ProjectCard
+                        cardImage='ORBS-Redesign/scheduling'
+                        cardImageAltText='Card image for the ORBS redesign project'
+                        cardTitle='ORBS Redesign'
+                        cardTitleStyling={{ fontSize: "28px" }}
+                        cardSubtitle='New look for an institutional app'
+                        cardSubtitleStyling={{ fontSize: "22px" }}
+                        projectPageLink='projects/ORBSRedesign'
+                        liveLink='https://orbs.utoronto.ca'
+                        stackIcons={[
+                            { class: "html5", icon: "/svgs/logos/html5.svg" },
+                            { class: "css3", icon: "/svgs/logos/css3.svg" },
+                            { class: "bootstrap", icon: "/svgs/logos/bootstrap.svg" },
+                        ]}
+                    />
+                </div>
+                <div className={`flexItem ${styles.projectBox}`}>
+                    <ProjectCard
                         cardImage='Home/girl-barbell-curls'
                         cardImageAltText='Card image for Workout Logger app'
                         cardTitle='Workout Logger'

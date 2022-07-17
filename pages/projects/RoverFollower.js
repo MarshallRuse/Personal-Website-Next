@@ -107,6 +107,15 @@ export default function RoverFollower() {
             developmentBackgroundImageSmallScreenAlt='WorkoutLogger/curlBackground'
             developmentInfo={<DevelopmentInfo />}
             developmentAltTitle='Report'
+            openGraphImages={[
+                {
+                    url: "https://res.cloudinary.com/marsh/image/upload/v1649330025/portfolio/RoverFollower/RoverFollowerOneFollower.png",
+                    width: 1526,
+                    height: 950,
+                    alt: "One of the rovers following its leader",
+                    type: "image/png",
+                },
+            ]}
         />
     );
 }

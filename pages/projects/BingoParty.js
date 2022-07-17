@@ -146,6 +146,15 @@ export default function BingoParty() {
             featuresInfo={<FeaturesInfo />}
             developmentBackgroundImage='BingoParty/beerBackground'
             developmentInfo={<DevelopmentInfo />}
+            openGraphImages={[
+                {
+                    url: "https://res.cloudinary.com/marsh/image/upload/v1649330081/portfolio/BingoParty/BingoPartyHomePage.png",
+                    width: 2478,
+                    height: 1320,
+                    alt: "Landing page for the Bingo Party app",
+                    type: "image/png",
+                },
+            ]}
         />
     );
 }

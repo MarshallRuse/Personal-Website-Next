@@ -2,8 +2,9 @@ import styleVariables from "../../styles/variables.module.scss";
 import ProjectPageTemplate from "../../components/elements/ProjectPageTemplate";
 import { IconRow, IconBox, NavLink, SubSubsectionTitle } from "../../components/elements/styledComponents";
 import GlowingIcon from "../../components/elements/GlowingIcon";
-import ReactLogo from "../../components/svgs/logos/colorless/react.svg";
-import MaterialUILogo from "../../components/svgs/logos/colorless/material-ui.svg";
+import HTML5Logo from "../../components/svgs/logos/colorless/html5.svg";
+import CSS3Logo from "../../components/svgs/logos/colorless/css3.svg";
+import BootstrapLogo from "../../components/svgs/logos/colorless/bootstrap.svg";
 
 const carouselImages = [
     {
@@ -68,8 +69,8 @@ const BackgroundInfo = () => (
                 University of Toronto&apos;s Department of Medicine
             </NavLink>
             . Prior to 2020 the application was almost exclusively used by the Internal Medicine program, but it was
-            decided that the system should be expanded to for use by the whole department, and, along with that, came a
-            redesign of the user interface.
+            decided that the system should be expanded upon for use by the whole department, and, along with that, came
+            a redesign of the user interface.
         </p>
         <p>
             While I take <strong style={{ textDecoration: "underline" }}>no credit</strong> for the functionality of the
@@ -82,44 +83,36 @@ const BackgroundInfo = () => (
 
 const FeaturesInfo = () => (
     <>
-        <p>The app takes as input 3 CSV files:</p>
-        <ol>
-            <li>
-                Rotations exported from the{" "}
-                <NavLink href='https://www.orbs.utoronto.ca/' target='_blank' rel='noopener noreferrer'>
-                    Online Rotation & Base Hospital Scheduling (ORBS)
-                </NavLink>
-            </li>
-            <li>A reference table for the Rotation Coordinators of the rotations listed in the rotations file</li>
-            <li>A reference table for the EPAs to be completed on the rotations listed in the rotations file.</li>
-        </ol>
-        <p>The residents in the first input are grouped by:</p>
+        <p>
+            To increase consistency across services, I based the new design of ORBS off of the{" "}
+            <NavLink href='https://deptmedicine.utoronto.ca/' target='_blank' rel='noopenner noreferred'>
+                University of Toronto&apos;s Department of Medicine website
+            </NavLink>{" "}
+            (which of course got its own face-lift right after completion of ours &#128579;), taking design elements
+            such as the horizontal Nav-menu with hoverable sub-menus, quick-link tiles, font, and color-scheme.
+        </p>
+        <p>
+            I also introduced particular styling to make the application more user-friendly. For instance, much of the
+            site is composed of pages containing tables with many static columns and rows, which necessitated scrolling
+            the header-rows or identifying-columns off-screen. I introduced tables with sticky-headers and columns that
+            wouldn&apos;t scroll off-screen so that one&apos;s place in the table would always be visible. To further
+            this, I added row-highlighting on hover so that the user has an easier time tracking a particular row across
+            large tables.
+        </p>
+        <p>
+            Many elements of the site were updated to be consistent with a typical user&apos;s understanding of modern
+            website tropes. These include:
+        </p>
         <ul className='haloList'>
-            <li>the rotation</li>
-            <li>the hospital the roation is taking place at</li>
-            <li>the residents&apos; seniority (i.e. Juniors or Seniors)</li>
+            <li>modern styling of buttons, links, and inputs;</li>
+            <li>a greater number of success, warning, and error alerts;</li>
+            <li>use of icons to more quickly communicate functionality;</li>
+            <li>hover-animations on certain elements to add visual interest;</li>
+            <li>
+                and updates to spacing and element-sizing to establish a better visual hierarchy and ease user
+                target-acquisition.
+            </li>
         </ul>
-        <p>Four tables are produced:</p>
-        <ol>
-            <li>all of the residents, Rotation Coordinators, and EPAs matched by rotation and hospital</li>
-            <li>the rotations and sites with exclusively Junior residents</li>
-            <li>the rotations and sites with exclusively Senior residents</li>
-            <li>the rotations and sites with both Junior and Senior residents</li>
-        </ol>
-        <p>
-            All of the uploading and data manipulation is done <em>entirely</em> within the browser, and there is no
-            outbound network traffic, so the data uploaded is secure.
-        </p>
-        <p>
-            For CSV input there is an info panel that explains what headers are required, and specifically missing
-            headers are highlighted for the user upon upload. Subsequent uploads are disallowed until the correct
-            headers are included. A sample table of data is included with each explanation.
-        </p>
-        <p>
-            Upon completion of the uploads (or at any point in between), the output-tables can be exported as a CSV. The
-            completed tables can then be used directly as input for pre-constructed Mail Merge documents for emailing to
-            the Rotation Coordinators.
-        </p>
     </>
 );
 
@@ -127,65 +120,35 @@ const DevelopmentInfo = () => (
     <>
         <IconRow styling={{ marginBottom: "2rem" }}>
             <IconBox>
-                <GlowingIcon title='React' glowColor={styleVariables.colorReact}>
-                    <ReactLogo />
+                <GlowingIcon title='HTML5' glowColor={styleVariables.colorHTML5}>
+                    <HTML5Logo />
                 </GlowingIcon>
             </IconBox>
             <IconBox>
-                <GlowingIcon title='Material UI' glowColor={styleVariables.colorMaterialUI}>
-                    <MaterialUILogo />
+                <GlowingIcon title='CSS3' glowColor={styleVariables.colorCSS3}>
+                    <CSS3Logo />
+                </GlowingIcon>
+            </IconBox>
+            <IconBox>
+                <GlowingIcon title='Bootstrap' glowColor={styleVariables.colorBootstrap}>
+                    <BootstrapLogo />
                 </GlowingIcon>
             </IconBox>
         </IconRow>
         <p>
-            Rotation Coordinator Report Formatter is designd entirely as a front-end app so that there are no security
-            vulnerabilities associated with transmitting the data to a server for processing.
-        </p>
-        <SubSubsectionTitle>Front-End</SubSubsectionTitle>
-        <p>
-            The React front-end utilizes components from{" "}
-            <NavLink href='https://mui.com/' target='_blank' rel='noopener noreferrer'>
-                MUI v5
+            My role in the development of this application (in addition to non-developmental regular testing of
+            functionality and interface) was to redesign and prototype the front-end styling. The back-end (which I was
+            not involved with) is built with ASP.NET WebForms connected via Entity Framework to a Microsoft SQL Server
+            database. As our back-end team was not familiar with modern JS front-end frameworks (such as React), and
+            because a quick redesign was desired, I opted to keep things simple and recreate all of the pages in basic
+            HTML and CSS. To get things going more quickly, I brought in{" "}
+            <NavLink href='https://getbootstrap.com/' target='_blank' rel='noopenner noreferred'>
+                Bootstrap
             </NavLink>
-            , a component library implementing Google’s Material Design visual language. Custom styling in keeping with
-            <NavLink
-                href='https://www.utm.utoronto.ca/communications/sites/files/communications/public/shared/UofT%20Style%20Guide%20%2B%20Boundless%20Guide%20Feb%202012.pdf'
-                target='_blank'
-                rel='noopener noreferrer'
-            >
-                the University of Toronto&apos;s Visual Identity Style Guide
-            </NavLink>{" "}
-            is implemented using{" "}
-            <NavLink
-                href='https://mui.com/material-ui/guides/styled-engine/#main-content'
-                target='_blank'
-                rel='noopener noreferrer'
-            >
-                MUI&apos;s emotion CSS-in-JS API
-            </NavLink>
-            .
-        </p>
-        <p>
-            A React implementation of the{" "}
-            <NavLink href='https://www.papaparse.com/' target='_blank' rel='noopener noreferrer'>
-                Papaparse
-            </NavLink>{" "}
-            in-browser CSV parsing library,{" "}
-            <NavLink href='https://www.npmjs.com/package/react-papaparse' target='_blank' rel='noopener noreferrer'>
-                react-papaparse v3
-            </NavLink>
-            , is used to parse the uploaded CSVs. Data grouping, filtering, and formatting are done with custom
-            functions acting on the data held in React state hooks, which are then fed to components wrapping{" "}
-            <NavLink href='https://mui.com/x/react-data-grid/' target='_blank' rel='noopener noreferrer'>
-                MUI&apos;s DataGrid
-            </NavLink>{" "}
-            component.
-        </p>
-        <p>
-            Animations are accomplished using{" "}
-            <NavLink href='https://www.framer.com/motion/' target='_blank' rel='noopener noreferrer'>
-                Framer Motion
-            </NavLink>
+            , &quot;the most popular HTML, CSS, and JS library in the world.&quot; Besides more quickly launching
+            development, Bootstrap was brought in because it was easily integrated with the existing tech-stack (a CDN
+            link can just be included in the head-tags), because it would ensure a modern, consistent styling of
+            elements on every page, and because my colleagues working on the backend were familiar with it.
         </p>
     </>
 );
@@ -193,15 +156,24 @@ const DevelopmentInfo = () => (
 export default function ORBSRedesign() {
     return (
         <ProjectPageTemplate
-            carouselBackgroundImage='ORBS-Redesign/torontoAerial'
+            carouselBackgroundImage='ORBS-Redesign/schedulingLandscape'
             pageTitle='ORBS Redesign'
             carouselImages={carouselImages}
             backgroundInfo={<BackgroundInfo />}
-            featuresBackgroundImage='ORBS-Redesign/calendarCorkboard'
+            featuresBackgroundImage='ORBS-Redesign/webdesign'
             featuresInfo={<FeaturesInfo />}
-            developmentBackgroundImage=''
+            developmentBackgroundImage='ORBS-Redesign/universityOfToronto'
             developmentBackgroundImageSmallScreenAlt=''
             developmentInfo={<DevelopmentInfo />}
+            openGraphImages={[
+                {
+                    url: "https://res.cloudinary.com/marsh/image/upload/v1651070810/portfolio/ORBS-Redesign/HomePageAfter.png",
+                    width: 1865,
+                    height: 829,
+                    alt: "Home page of the redesigned ORBS applications",
+                    type: "image/png",
+                },
+            ]}
         />
     );
 }

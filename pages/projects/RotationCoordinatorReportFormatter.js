@@ -213,6 +213,22 @@ export default function RotationCoordinatorReportFormatter() {
             developmentBackgroundImage=''
             developmentBackgroundImageSmallScreenAlt=''
             developmentInfo={<DevelopmentInfo />}
+            openGraphImages={[
+                {
+                    url: "https://res.cloudinary.com/marsh/image/upload/v1650203399/portfolio/RotationCoordinatorReportFormatter/landing.png",
+                    width: 1887,
+                    height: 857,
+                    alt: "Landing page of the Rotation Coordinator Report Formatter web app",
+                    type: "image/png",
+                },
+                {
+                    url: "https://res.cloudinary.com/marsh/image/upload/v1650203400/portfolio/RotationCoordinatorReportFormatter/whatIsThis.png",
+                    width: 1878,
+                    height: 856,
+                    alt: "Explanation panel of the Rotation Coordinator Report Formatter's functionality",
+                    type: "image/png",
+                },
+            ]}
         />
     );
 }

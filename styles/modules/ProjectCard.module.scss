@@ -164,6 +164,16 @@
     width: 60%;
 }
 
+.stackIconWrapper.bootstrap {
+    --aug-border-bg: var(--color-bootstrap);
+    background: linear-gradient(150deg, transparent, rgba(var(--color-bootstrap-raw), 0.5));
+}
+
+.stackIconWrapper.css3 {
+    --aug-border-bg: var(--color-css3);
+    background: linear-gradient(150deg, transparent, rgba(var(--color-css3-raw), 0.5));
+}
+
 .stackIconWrapper.express {
     --aug-border-bg: var(--color-express);
     background: linear-gradient(150deg, transparent, rgba(var(--color-express-raw), 0.5));
@@ -172,6 +182,11 @@
 .stackIconWrapper.firebase {
     --aug-border-bg: var(--color-firebase);
     background: linear-gradient(150deg, transparent, rgba(var(--color-firebase-raw), 0.5));
+}
+
+.stackIconWrapper.html5 {
+    --aug-border-bg: var(--color-html5);
+    background: linear-gradient(150deg, transparent, rgba(var(--color-html5-raw), 0.5));
 }
 
 .stackIconWrapper.java {

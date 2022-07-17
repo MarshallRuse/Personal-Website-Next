@@ -228,6 +228,15 @@ export default function TripTracker() {
             featuresInfo={<FeaturesInfo />}
             developmentBackgroundImage='TripTracker/globeBackground'
             developmentInfo={<DevelopmentInfo />}
+            openGraphImages={[
+                {
+                    url: "https://res.cloudinary.com/marsh/image/upload/v1649329989/portfolio/TripTracker/TripTrackerLocationAutocomplete.png",
+                    width: 564,
+                    height: 1134,
+                    alt: "An expense being added, with location autocomplete from Google Maps' JavaScript Place API",
+                    type: "image/png",
+                },
+            ]}
         />
     );
 }

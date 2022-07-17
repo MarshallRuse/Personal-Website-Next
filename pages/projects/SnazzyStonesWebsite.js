@@ -237,6 +237,15 @@ export default function SnazzyStonesWebsite() {
             developmentBackgroundImage=''
             developmentBackgroundImageSmallScreenAlt=''
             developmentInfo={<DevelopmentInfo />}
+            openGraphImages={[
+                {
+                    url: "https://res.cloudinary.com/marsh/image/upload/v1656935628/portfolio/SnazzyStonesWebsite/SnazzyStonesHomeDesktop.png",
+                    width: 1891,
+                    height: 815,
+                    alt: "Landing page for snazzystones.ca",
+                    type: "image/png",
+                },
+            ]}
         />
     );
 }
