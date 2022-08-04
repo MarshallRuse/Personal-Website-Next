@@ -172,7 +172,8 @@ const DevelopmentInfo = () => (
             for it, it&apos;s a seriously cool package.
         </p>
         <p>
-            Lastly, I made use of{" "}
+            Lastly, I made use of Next.js&apos;s Image component to optimize images on the site. Previously I made use
+            of{" "}
             <NavLink
                 href='https://cloudinary.com/documentation/advanced_image_components_tutorial'
                 target='_blank'
@@ -180,8 +181,19 @@ const DevelopmentInfo = () => (
             >
                 Cloudinary&apos;s Adavanced Image component
             </NavLink>{" "}
-            to smartly serve up my Cloudinary Media Library images quickly and responsively (and with a cool pixelation
-            placeholder), and I used{" "}
+            which was supposed to serve much the same funtionality of delivering optimized, responsively-scale images
+            (not to mention a cool pixelation placeholder), but there were difficulties getting the responsive sizing to
+            survive the Next build process. I refactored my CloudinaryImage component to still use Cloudinary&apos;s
+            auto-formatting and transformations (via the{" "}
+            <NavLink
+                href='https://www.npmjs.com/package/cloudinary-build-url'
+                target='_blank'
+                rel='noopenner noreferrer'
+            >
+                cloudinary-build-url NPM package
+            </NavLink>
+            ) to deliver appropriately sized images (and a tiny placeholder), but plugged it into Next&apos;s Image
+            component to better detect those sizing needs server-side. I used{" "}
             <NavLink
                 href='https://www.npmjs.com/package/react-responsive-carousel'
                 target='_blank'
