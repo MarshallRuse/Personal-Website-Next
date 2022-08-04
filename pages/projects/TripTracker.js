@@ -10,46 +10,78 @@ import NodeJSLogo from "../../components/svgs/logos/colorless/nodejs.svg";
 
 const carouselImages = [
     {
-        imageSrc: "TripTracker/TripTrackerTripPageLandscape",
-        smallScreenAltSrc: "TripTracker/TripTrackerTripPage",
+        src: "TripTracker/TripTrackerTripPageLandscape",
+        srcSmall: "TripTracker/TripTrackerTripPage",
         description: "The trips dashboard page",
+        width: 2560,
+        height: 1600,
+        widthSmall: 565,
+        heightSmall: 1135,
     },
     {
-        imageSrc: "TripTracker/TripTrackerAddTripLandscape",
-        smallScreenAltSrc: "TripTracker/TripTrackerAddTrip",
+        src: "TripTracker/TripTrackerAddTripLandscape",
+        srcSmall: "TripTracker/TripTrackerAddTrip",
         description:
             "Add a new trip. Give it a title, a preferred currency for summaries, and choose categories for your expenses (can be edited at any time)",
+        width: 2560,
+        height: 1600,
+        widthSmall: 567,
+        heightSmall: 1135,
     },
     {
-        imageSrc: "TripTracker/TripTrackerExpensesPageLandscape",
-        smallScreenAltSrc: "TripTracker/TripTrackerExpensesPage",
+        src: "TripTracker/TripTrackerExpensesPageLandscape",
+        srcSmall: "TripTracker/TripTrackerExpensesPage",
         description: "The expenses page for each trip",
+        width: 2560,
+        height: 1600,
+        widthSmall: 566,
+        heightSmall: 1134,
     },
     {
-        imageSrc: "TripTracker/TripTrackerAddExpenseLandscape",
-        smallScreenAltSrc: "TripTracker/TripTrackerAddExpense",
+        src: "TripTracker/TripTrackerAddExpenseLandscape",
+        srcSmall: "TripTracker/TripTrackerAddExpense",
         description: "The data to track for each expense",
+        width: 2560,
+        height: 1600,
+        widthSmall: 565,
+        heightSmall: 1135,
     },
     {
-        imageSrc: "TripTracker/TripTrackerDateSelectionLandscape",
-        smallScreenAltSrc: "TripTracker/TripTrackerDateSelection",
+        src: "TripTracker/TripTrackerDateSelectionLandscape",
+        srcSmall: "TripTracker/TripTrackerDateSelection",
         description: "Date selection done via a Material UI widget",
+        width: 2560,
+        height: 1600,
+        widthSmall: 563,
+        heightSmall: 1128,
     },
     {
-        imageSrc: "TripTracker/TripTrackerLocationAutocompleteLandscape",
-        smallScreenAltSrc: "TripTracker/TripTrackerLocationAutocomplete",
+        src: "TripTracker/TripTrackerLocationAutocompleteLandscape",
+        srcSmall: "TripTracker/TripTrackerLocationAutocomplete",
         description: "Fill in location data with a Google Places business or city search",
+        width: 2560,
+        height: 1600,
+        widthSmall: 564,
+        heightSmall: 1134,
     },
     {
-        imageSrc: "TripTracker/TripTrackerSortLandscape",
-        smallScreenAltSrc: "TripTracker/TripTrackerSort",
+        src: "TripTracker/TripTrackerSortLandscape",
+        srcSmall: "TripTracker/TripTrackerSort",
         description: "Sort your expenses (and trips) on a variety of metrics",
+        width: 2560,
+        height: 1600,
+        widthSmall: 566,
+        heightSmall: 1136,
     },
     {
-        imageSrc: "TripTracker/TripTrackerTripSummaryLandscape",
-        smallScreenAltSrc: "TripTracker/TripTrackerTripSummary",
+        src: "TripTracker/TripTrackerTripSummaryLandscape",
+        srcSmall: "TripTracker/TripTrackerTripSummary",
         description:
             "Receive a summary of your trip's expenses, broken down by multiple metrics, in your preferred currency",
+        width: 2560,
+        height: 1600,
+        widthSmall: 567,
+        heightSmall: 1136,
     },
 ];
 
@@ -218,15 +250,15 @@ const DevelopmentInfo = () => (
 export default function TripTracker() {
     return (
         <ProjectPageTemplate
-            carouselBackgroundImage='TripTracker/mapsBackground'
+            carouselBackgroundImage={{ src: "TripTracker/mapsBackground", width: 4671, height: 3114 }}
             pageTitle='Trip Tracker App'
             projectSourceLink='https://github.com/MarshallRuse/TripExpensesTracker'
             projectDemoLink='https://marshall-trip-tracker-app.herokuapp.com/'
             carouselImages={carouselImages}
             backgroundInfo={<BackgroundInfo />}
-            featuresBackgroundImage='TripTracker/travelThingsBackground'
+            featuresBackgroundImage={{ src: "TripTracker/travelThingsBackground", width: 3231, height: 2150 }}
             featuresInfo={<FeaturesInfo />}
-            developmentBackgroundImage='TripTracker/globeBackground'
+            developmentBackgroundImage={{ src: "TripTracker/globeBackground", width: 6016, height: 4016 }}
             developmentInfo={<DevelopmentInfo />}
             openGraphImages={[
                 {

@@ -9,37 +9,53 @@ import NextjsLogo from "../../components/svgs/logos/colorless/nextjs.svg";
 
 const carouselImages = [
     {
-        imageSrc: "SnazzyStonesWebsite/SnazzyStonesHomeDesktop",
+        src: "SnazzyStonesWebsite/SnazzyStonesHomeDesktop",
         description: "The landing page for the website",
+        width: 1891,
+        height: 815,
     },
     {
-        imageSrc: "SnazzyStonesWebsite/InstagramFeedDesktop",
+        src: "SnazzyStonesWebsite/InstagramFeedDesktop",
         description: "A feed of SnazzyStones' latest Instagram posts from Instagram's Basic Display API",
+        width: 1892,
+        height: 864,
     },
     {
-        imageSrc: "SnazzyStonesWebsite/SnazzyStonesAutocompleteDesktop",
+        src: "SnazzyStonesWebsite/SnazzyStonesAutocompleteDesktop",
         description: "An autocompleting search bar for any products on the website",
+        width: 1887,
+        height: 860,
     },
     {
-        imageSrc: "SnazzyStonesWebsite/SnazzyStonesProductListDesktop",
+        src: "SnazzyStonesWebsite/SnazzyStonesProductListDesktop",
         description: "The catalog page for the website's products, modelled photos on hover",
+        width: 1894,
+        height: 863,
     },
     {
-        imageSrc: "SnazzyStonesWebsite/SnazzyStonesProductPageDesktop",
+        src: "SnazzyStonesWebsite/SnazzyStonesProductPageDesktop",
         description:
             "The product page - Framer Motion image carousel, Etsy API data, social-sharing buttons, link to Etsy page",
+        width: 1893,
+        height: 861,
     },
     {
-        imageSrc: "SnazzyStonesWebsite/SnazzyStonesProductPageReviewsDesktop",
+        src: "SnazzyStonesWebsite/SnazzyStonesProductPageReviewsDesktop",
         description: "Product reviews drawn from Etsy, images included",
+        width: 1888,
+        height: 864,
     },
     {
-        imageSrc: "SnazzyStonesWebsite/SnazzyStonesOurShowsDesktop",
+        src: "SnazzyStonesWebsite/SnazzyStonesOurShowsDesktop",
         description: "A page with embedded Google Maps showing in-person market locations",
+        width: 1886,
+        height: 862,
     },
     {
-        imageSrc: "SnazzyStonesWebsite/SnazzyStonesContactFormDesktop",
+        src: "SnazzyStonesWebsite/SnazzyStonesContactFormDesktop",
         description: "Contact form page, uses SendGrid to send inquiries from custom-domain email address",
+        width: 1890,
+        height: 864,
     },
 ];
 
@@ -226,16 +242,18 @@ const DevelopmentInfo = () => (
 export default function SnazzyStonesWebsite() {
     return (
         <ProjectPageTemplate
-            carouselBackgroundImage='SnazzyStonesWebsite/chainBracelets_2020-10-12'
+            carouselBackgroundImage={{
+                src: "SnazzyStonesWebsite/chainBracelets_2020-10-12",
+                width: 3544,
+                height: 1830,
+            }}
             pageTitle={<>Snazzy&shy;Stones.ca</>}
             projectSourceLink='https://github.com/MarshallRuse/SnazzyStones-Next'
             projectLiveLink='https://snazzystones.ca'
             carouselImages={carouselImages}
             backgroundInfo={<BackgroundInfo />}
-            featuresBackgroundImage='SnazzyStonesWebsite/calendarCorkboard'
+            featuresBackgroundImage={{ src: "SnazzyStonesWebsite/hoops_2020-10-22", width: 4032, height: 1960 }}
             featuresInfo={<FeaturesInfo />}
-            developmentBackgroundImage=''
-            developmentBackgroundImageSmallScreenAlt=''
             developmentInfo={<DevelopmentInfo />}
             openGraphImages={[
                 {

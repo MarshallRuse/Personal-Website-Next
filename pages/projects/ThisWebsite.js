@@ -9,44 +9,64 @@ import Link from "next/link";
 
 const carouselImages = [
     {
-        imageSrc: "ThisWebsite/headerOld",
+        src: "ThisWebsite/headerOld",
         description: "The old header, complete with cheesy bounce-in photo",
+        width: 1894,
+        height: 861,
     },
     {
-        imageSrc: "ThisWebsite/headerNew",
+        src: "ThisWebsite/headerNew",
         description: "The new header, sleek and cyberpunkey",
+        width: 1893,
+        height: 863,
     },
     {
-        imageSrc: "ThisWebsite/skillsSectionOld",
+        src: "ThisWebsite/skillsSectionOld",
         description: "Plain Jane old skills section",
+        width: 1887,
+        height: 864,
     },
     {
-        imageSrc: "ThisWebsite/skillsSectionNew",
+        src: "ThisWebsite/skillsSectionNew",
         description: <>Sexy neon icons glow-up when in view (much like my skills themselves have &#128521;)</>,
+        width: 1838,
+        height: 857,
     },
     {
-        imageSrc: "ThisWebsite/projectsSectionOld",
+        src: "ThisWebsite/projectsSectionOld",
         description: "The old Project Cards, built with Material-UI cards",
+        width: 1892,
+        height: 861,
     },
     {
-        imageSrc: "ThisWebsite/projectsSectionNew",
+        src: "ThisWebsite/projectsSectionNew",
         description: "The new Project Cards, built with CSS Grid and Augmented-UI",
+        width: 1854,
+        height: 867,
     },
     {
-        imageSrc: "ThisWebsite/aboutMeSectionOld",
+        src: "ThisWebsite/aboutMeSectionOld",
         description: "Old, overly self-indulgent About Me section",
+        width: 1893,
+        height: 861,
     },
     {
-        imageSrc: "ThisWebsite/aboutMeSectionNew",
+        src: "ThisWebsite/aboutMeSectionNew",
         description: "New About Me section, still self-indulgent, but hidden away in another tab, and with a TL;DR ",
+        width: 1889,
+        height: 865,
     },
     {
-        imageSrc: "ThisWebsite/projectPageOld",
+        src: "ThisWebsite/projectPageOld",
         description: "Old project pages were each built individually",
+        width: 1890,
+        height: 859,
     },
     {
-        imageSrc: "ThisWebsite/projectPageNew",
+        src: "ThisWebsite/projectPageNew",
         description: "New project pages are built on a template, and share the cyberpunk aesthetic",
+        width: 1892,
+        height: 862,
     },
 ];
 
@@ -185,16 +205,15 @@ const DevelopmentInfo = () => (
 export default function ThisWebsite() {
     return (
         <ProjectPageTemplate
-            carouselBackgroundImage='ThisWebsite/genoaVaporwave'
+            carouselBackgroundImage={{ src: "ThisWebsite/genoaVaporwave", width: 4032, height: 1960 }}
             pageTitle='This Website'
             projectSourceLink='https://github.com/MarshallRuse/Personal-Website-Next'
             projectLiveLink='https://marshallruse.com'
             carouselImages={carouselImages}
             backgroundInfo={<BackgroundInfo />}
-            featuresBackgroundImage='ThisWebsite/torontoHarborCyberpunk'
+            featuresBackgroundImage={{ src: "ThisWebsite/torontoHarborCyberpunk", width: 5080, height: 3149 }}
             featuresInfo={<FeaturesInfo />}
-            developmentBackgroundImage='ThisWebsite/development'
-            developmentBackgroundImageSmallScreenAlt=''
+            developmentBackgroundImage={{ src: "ThisWebsite/development", width: 9504, height: 6336 }}
             developmentInfo={<DevelopmentInfo />}
             openGraphImages={[
                 {

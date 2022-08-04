@@ -38,8 +38,8 @@ const ProjectCard = (props) => {
                 <div className={styles.cardBodyAugReset} data-augmented-ui-reset>
                     <CloudinaryImage
                         altText={cardImageAltText}
-                        height={"462px"}
-                        width={"305px"}
+                        height={462}
+                        width={305}
                         className={`${styles.cardBody} ${styles.cardBodyImg}`}
                         fileName={cardImage}
                         data-augmented-ui={`tl-clip tr-2-clip-x ${sourceLink && "br-2-clip-x"} ${

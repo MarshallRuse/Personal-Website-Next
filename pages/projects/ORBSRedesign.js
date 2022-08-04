@@ -8,53 +8,77 @@ import BootstrapLogo from "../../components/svgs/logos/colorless/bootstrap.svg";
 
 const carouselImages = [
     {
-        imageSrc: "ORBS-Redesign/ORBSRedesignTitleCard",
+        src: "ORBS-Redesign/ORBSRedesignTitleCard",
         description: "",
+        width: 1886,
+        height: 864,
     },
     {
-        imageSrc: "ORBS-Redesign/LoginSignupBefore",
+        src: "ORBS-Redesign/LoginSignupBefore",
         description: "The original landing page with login & signup",
+        width: 1885,
+        height: 863,
     },
     {
-        imageSrc: "ORBS-Redesign/LoginSignupAfter",
+        src: "ORBS-Redesign/LoginSignupAfter",
         description: "The redesigned landing page",
+        width: 1886,
+        height: 864,
     },
     {
-        imageSrc: "ORBS-Redesign/HomePageBefore",
+        src: "ORBS-Redesign/HomePageBefore",
         description: "The original Home Page once signed in",
+        width: 1893,
+        height: 862,
     },
     {
-        imageSrc: "ORBS-Redesign/HomePageAfter",
+        src: "ORBS-Redesign/HomePageAfter",
         description: "The redesigned Home Page, with more readable explanatory text, horizontal menu, and quick-links",
+        width: 1865,
+        height: 829,
     },
     {
-        imageSrc: "ORBS-Redesign/TraineeSelectionsBefore",
+        src: "ORBS-Redesign/TraineeSelectionsBefore",
         description: "The original page listing links to various resident-selection pages",
+        width: 1880,
+        height: 840,
     },
     {
-        imageSrc: "ORBS-Redesign/TraineeSelectionsAfter",
+        src: "ORBS-Redesign/TraineeSelectionsAfter",
         description: "The redesigned Trainee Selection page",
+        width: 1869,
+        height: 834,
     },
     {
-        imageSrc: "ORBS-Redesign/RotationSelectionsBefore",
+        src: "ORBS-Redesign/RotationSelectionsBefore",
         description: "The original page for which residents select their upcoming years' rotations",
+        width: 1886,
+        height: 866,
     },
     {
-        imageSrc: "ORBS-Redesign/RotationSelectionsAfter",
+        src: "ORBS-Redesign/RotationSelectionsAfter",
         description: "The redesigned page for which residents select their upcoming years' rotations",
+        width: 1860,
+        height: 837,
     },
     {
-        imageSrc: "ORBS-Redesign/RotationSelectionsAfter2",
+        src: "ORBS-Redesign/RotationSelectionsAfter2",
         description: "Another tab of the Rotations Selections page showing more of the table",
+        width: 1865,
+        height: 837,
     },
     {
-        imageSrc: "ORBS-Redesign/ResidentScheduleAfter",
+        src: "ORBS-Redesign/ResidentScheduleAfter",
         description:
             "The Resident Schedule table now scrolls within its own container with a fixed header, horizontal scrolling with fixed initial columns shown",
+        width: 1883,
+        height: 883,
     },
     {
-        imageSrc: "ORBS-Redesign/MenuAfter",
+        src: "ORBS-Redesign/MenuAfter",
         description: "Navigation menu is now a dropdown hover menu",
+        width: 1876,
+        height: 830,
     },
 ];
 
@@ -156,14 +180,13 @@ const DevelopmentInfo = () => (
 export default function ORBSRedesign() {
     return (
         <ProjectPageTemplate
-            carouselBackgroundImage='ORBS-Redesign/schedulingLandscape'
+            carouselBackgroundImage={{ src: "ORBS-Redesign/schedulingLandscape", width: 6000, height: 4000 }}
             pageTitle='ORBS Redesign'
             carouselImages={carouselImages}
             backgroundInfo={<BackgroundInfo />}
-            featuresBackgroundImage='ORBS-Redesign/webdesign'
+            featuresBackgroundImage={{ src: "ORBS-Redesign/webdesign", width: 3632, height: 4540 }}
             featuresInfo={<FeaturesInfo />}
-            developmentBackgroundImage='ORBS-Redesign/universityOfToronto'
-            developmentBackgroundImageSmallScreenAlt=''
+            developmentBackgroundImage={{ src: "ORBS-Redesign/universityOfToronto", width: 7952, height: 5304 }}
             developmentInfo={<DevelopmentInfo />}
             openGraphImages={[
                 {

@@ -10,22 +10,30 @@ import NodeJSLogo from "../../components/svgs/logos/colorless/nodejs.svg";
 import SassLogo from "../../components/svgs/logos/colorless/sass.svg";
 
 const carouselImages = [
-    { imageSrc: "BingoParty/BingoPartyHomePage", description: "The Bingo Party home page" },
+    { src: "BingoParty/BingoPartyHomePage", description: "The Bingo Party home page", width: 2478, height: 1320 },
     {
-        imageSrc: "BingoParty/BingoPartyGameBoard",
+        src: "BingoParty/BingoPartyGameBoard",
         description: "Play a game in your browser, and your progress persists",
+        width: 2474,
+        height: 1321,
     },
     {
-        imageSrc: "BingoParty/BingoPartyBingoHallGames",
+        src: "BingoParty/BingoPartyBingoHallGames",
         description: "Sort by a game's popularity, or search for a game; upvote and downvote games",
+        width: 2474,
+        height: 1318,
     },
     {
-        imageSrc: "BingoParty/BingoPartyBingoHallUsers",
+        src: "BingoParty/BingoPartyBingoHallUsers",
         description: "Find the users with the most popular games",
+        width: 2470,
+        height: 1318,
     },
     {
-        imageSrc: "BingoParty/BingoPartyProfilePage",
+        src: "BingoParty/BingoPartyProfilePage",
         description: "Follow and be followed by other users",
+        width: 2472,
+        height: 1316,
     },
 ];
 
@@ -136,15 +144,15 @@ const DevelopmentInfo = () => (
 export default function BingoParty() {
     return (
         <ProjectPageTemplate
-            carouselBackgroundImage='BingoParty/drinkingBackground'
+            carouselBackgroundImage={{ src: "BingoParty/drinkingBackground", width: 5760, height: 3840 }}
             pageTitle='Bingo Party App'
             projectSourceLink='https://github.com/MarshallRuse/Bingo-App-React'
             projectDemoLink='https://marshall-bingo-party-app.herokuapp.com/'
             carouselImages={carouselImages}
             backgroundInfo={<BackgroundInfo />}
-            featuresBackgroundImage='BingoParty/bingoBallBackground'
+            featuresBackgroundImage={{ src: "BingoParty/bingoBallBackground", width: 1920, height: 1445 }}
             featuresInfo={<FeaturesInfo />}
-            developmentBackgroundImage='BingoParty/beerBackground'
+            developmentBackgroundImage={{ src: "BingoParty/beerBackground", width: 4672, height: 3104 }}
             developmentInfo={<DevelopmentInfo />}
             openGraphImages={[
                 {

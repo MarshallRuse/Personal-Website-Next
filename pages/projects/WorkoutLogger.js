@@ -8,41 +8,69 @@ import FirebaseLogo from "../../components/svgs/logos/colorless/firebase.svg";
 
 const carouselImages = [
     {
-        imageSrc: "WorkoutLogger/WorkoutLoggerAuthPageLandscape",
-        smallScreenAltSrc: "WorkoutLogger/WorkoutLoggerAuthPage",
+        src: "WorkoutLogger/WorkoutLoggerAuthPageLandscape",
+        srcSmall: "WorkoutLogger/WorkoutLoggerAuthPage",
         description: "The Sign-Up and Login Page for the app",
+        width: 2560,
+        height: 1600,
+        widthSmall: 565,
+        heightSmall: 1133,
     },
     {
-        imageSrc: "WorkoutLogger/WorkoutLoggerWorkoutsPageLandscape",
-        smallScreenAltSrc: "WorkoutLogger/WorkoutLoggerWorkoutsPage",
+        src: "WorkoutLogger/WorkoutLoggerWorkoutsPageLandscape",
+        srcSmall: "WorkoutLogger/WorkoutLoggerWorkoutsPage",
         description: "All of your workouts, sorted by date",
+        width: 2560,
+        height: 1600,
+        widthSmall: 564,
+        heightSmall: 1135,
     },
     {
-        imageSrc: "WorkoutLogger/WorkoutLoggerWorkoutInstancePageLandscape",
-        smallScreenAltSrc: "WorkoutLogger/WorkoutLoggerWorkoutInstancePage",
+        src: "WorkoutLogger/WorkoutLoggerWorkoutInstancePageLandscape",
+        srcSmall: "WorkoutLogger/WorkoutLoggerWorkoutInstancePage",
         description: "The page displaying exercises completed for each workout",
+        width: 2560,
+        height: 1600,
+        widthSmall: 563,
+        heightSmall: 1132,
     },
     {
-        imageSrc: "WorkoutLogger/WorkoutLoggerExerciseInstancePageUnilateralLandscape",
-        smallScreenAltSrc: "WorkoutLogger/WorkoutLoggerExerciseInstancePageUnilateral",
+        src: "WorkoutLogger/WorkoutLoggerExerciseInstancePageUnilateralLandscape",
+        srcSmall: "WorkoutLogger/WorkoutLoggerExerciseInstancePageUnilateral",
         description:
             "The page for each exercise instance - this example is a unilateral exercise (both left- and right-side sets)",
+        width: 2560,
+        height: 1600,
+        widthSmall: 566,
+        heightSmall: 1136,
     },
     {
-        imageSrc: "WorkoutLogger/WorkoutLoggerExerciseInstancePageOptionsLandscape",
-        smallScreenAltSrc: "WorkoutLogger/WorkoutLoggerExerciseInstancePageOptions",
+        src: "WorkoutLogger/WorkoutLoggerExerciseInstancePageOptionsLandscape",
+        srcSmall: "WorkoutLogger/WorkoutLoggerExerciseInstancePageOptions",
         description: "Each set can be labelled left and right, and the units can be changed on the fly",
+        width: 2560,
+        height: 1600,
+        widthSmall: 566,
+        heightSmall: 1136,
     },
     {
-        imageSrc: "WorkoutLogger/WorkoutLoggerExercisesPageLandscape",
-        smallScreenAltSrc: "WorkoutLogger/WorkoutLoggerExercisesPage",
+        src: "WorkoutLogger/WorkoutLoggerExercisesPageLandscape",
+        srcSmall: "WorkoutLogger/WorkoutLoggerExercisesPage",
         description:
             "Each account starts with a default set of exercises that can be edited, added to, and deleted from",
+        width: 2560,
+        height: 1600,
+        widthSmall: 563,
+        heightSmall: 1121,
     },
     {
-        imageSrc: "WorkoutLogger/WorkoutLoggerExerciseCreationLandscape",
-        smallScreenAltSrc: "WorkoutLogger/WorkoutLoggerExerciseCreation",
+        src: "WorkoutLogger/WorkoutLoggerExerciseCreationLandscape",
+        srcSmall: "WorkoutLogger/WorkoutLoggerExerciseCreation",
         description: "Add new exercises, customized to your needs",
+        width: 2560,
+        height: 1600,
+        widthSmall: 565,
+        heightSmall: 1133,
     },
 ];
 
@@ -164,16 +192,22 @@ const DevelopmentInfo = () => (
 export default function WorkoutLogger() {
     return (
         <ProjectPageTemplate
-            carouselBackgroundImage='WorkoutLogger/dumbbellsBackground'
+            carouselBackgroundImage={{ src: "WorkoutLogger/dumbbellsBackground", width: 4272, height: 2848 }}
             pageTitle='Workout Logger App'
             projectSourceLink='https://github.com/MarshallRuse/workout-logger'
             projectDemoLink='https://marshalls-workout-logger.herokuapp.com/'
             carouselImages={carouselImages}
             backgroundInfo={<BackgroundInfo />}
-            featuresBackgroundImage='WorkoutLogger/gymBackground'
+            featuresBackgroundImage={{ src: "WorkoutLogger/gymBackground", width: 3500, height: 2333 }}
             featuresInfo={<FeaturesInfo />}
-            developmentBackgroundImage='WorkoutLogger/workoutBackground'
-            developmentBackgroundImageSmallScreenAlt='WorkoutLogger/curlBackground'
+            developmentBackgroundImage={{
+                src: "WorkoutLogger/workoutBackground",
+                width: 6000,
+                height: 4000,
+                srcSmall: "WorkoutLogger/curlBackground",
+                widthSmall: 3744,
+                heightSmall: 5616,
+            }}
             developmentInfo={<DevelopmentInfo />}
             openGraphImages={[
                 {

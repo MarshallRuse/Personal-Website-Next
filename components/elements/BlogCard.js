@@ -1,8 +1,4 @@
-import { useState, useEffect } from "react";
-import { useInView } from "react-intersection-observer";
-import CloudinaryImage from "../elements/CloudinaryImage";
 import Image from "next/image";
-import { NavLink } from "../elements/styledComponents";
 import styles from "../../styles/modules/BlogSection.module.scss";
 import EventSharp from "@mui/icons-material/EventSharp";
 import LocalOfferSharp from "@mui/icons-material/LocalOfferSharp";

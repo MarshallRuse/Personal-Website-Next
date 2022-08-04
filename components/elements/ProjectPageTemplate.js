@@ -12,8 +12,16 @@ import { SectionTitle, SubsectionTitle, TextContainer } from "./styledComponents
 import BackArrow from "./BackArrow";
 
 const ProjectPageTemplate = ({
-    carouselBackgroundImage,
-    carouselBackgroundImageSmallScreenAlt,
+    carouselBackgroundImage = {
+        src: "",
+        alt: "",
+        width: null,
+        height: null,
+        srcSmall: "",
+        widthSmall: null,
+        heightSmall: null,
+        altSmall: "",
+    },
     autoPlayCarousel = true,
     pageTitle,
     projectSourceLink = "",
@@ -23,12 +31,28 @@ const ProjectPageTemplate = ({
     backgroundInfo,
     backgroundAltTitle = "",
     featuresAltTitle = "",
-    featuresBackgroundImage,
-    featuresBackgroundImageSmallScreenAlt,
+    featuresBackgroundImage = {
+        src: "",
+        alt: "",
+        width: null,
+        height: null,
+        srcSmall: "",
+        widthSmall: null,
+        heightSmall: null,
+        altSmall: "",
+    },
     featuresInfo,
     developmentAltTitle = "",
-    developmentBackgroundImage,
-    developmentBackgroundImageSmallScreenAlt,
+    developmentBackgroundImage = {
+        src: "",
+        alt: "",
+        width: null,
+        height: null,
+        srcSmall: "",
+        widthSmall: null,
+        heightSmall: null,
+        altSmall: "",
+    },
     developmentInfo,
     openGraphImages = [],
 }) => {
@@ -55,12 +79,22 @@ const ProjectPageTemplate = ({
             <main className={styles.pageWrapper}>
                 <BackArrow />
                 <div className={`${styles.backgroundImageContainer} ${styles.carouselBackground}`}>
-                    {(carouselBackgroundImageSmallScreenAlt || carouselBackgroundImage) && (
+                    {(carouselBackgroundImage.srcSmall || carouselBackgroundImage.src) && (
                         <CloudinaryImage
                             fileName={
-                                carouselBackgroundImageSmallScreenAlt && smallScreen
-                                    ? carouselBackgroundImageSmallScreenAlt
-                                    : carouselBackgroundImage
+                                carouselBackgroundImage.srcSmall && smallScreen
+                                    ? carouselBackgroundImage.srcSmall
+                                    : carouselBackgroundImage.src
+                            }
+                            width={
+                                carouselBackgroundImage.srcSmall && smallScreen
+                                    ? carouselBackgroundImage.widthSmall
+                                    : carouselBackgroundImage.width
+                            }
+                            height={
+                                carouselBackgroundImage.srcSmall && smallScreen
+                                    ? carouselBackgroundImage.heightSmall
+                                    : carouselBackgroundImage.height
                             }
                             backgroundImage
                         />
@@ -129,11 +163,20 @@ const ProjectPageTemplate = ({
                                     <div className={styles.slideContainer} key={`carousel-image-${index}`}>
                                         <CloudinaryImage
                                             fileName={
-                                                smallScreen && imageObj.smallScreenAltSrc
-                                                    ? imageObj.smallScreenAltSrc
-                                                    : imageObj.imageSrc
+                                                smallScreen && imageObj.srcSmall ? imageObj.srcSmall : imageObj.src
                                             }
-                                            altText={imageObj.altText}
+                                            alt={imageObj.description}
+                                            width={
+                                                smallScreen && imageObj.widthSmall
+                                                    ? imageObj.widthSmall
+                                                    : imageObj.width
+                                            }
+                                            height={
+                                                smallScreen && imageObj.heightSmall
+                                                    ? imageObj.heightSmall
+                                                    : imageObj.height
+                                            }
+                                            altText={imageObj.alt}
                                         />
                                         {imageObj.description && <p className='legend'>{imageObj.description}</p>}
                                     </div>
@@ -149,12 +192,22 @@ const ProjectPageTemplate = ({
                     <TextContainer>{backgroundInfo}</TextContainer>
                 </section>
                 <div className={styles.backgroundImageContainer}>
-                    {(featuresBackgroundImageSmallScreenAlt || featuresBackgroundImage) && (
+                    {(featuresBackgroundImage.srcSmall || featuresBackgroundImage.src) && (
                         <CloudinaryImage
                             fileName={
-                                featuresBackgroundImageSmallScreenAlt && smallScreen
-                                    ? featuresBackgroundImageSmallScreenAlt
-                                    : featuresBackgroundImage
+                                featuresBackgroundImage.srcSmall && smallScreen
+                                    ? featuresBackgroundImage.srcSmall
+                                    : featuresBackgroundImage.src
+                            }
+                            width={
+                                featuresBackgroundImage.srcSmall && smallScreen
+                                    ? featuresBackgroundImage.widthSmall
+                                    : featuresBackgroundImage.width
+                            }
+                            height={
+                                featuresBackgroundImage.srcSmall && smallScreen
+                                    ? featuresBackgroundImage.heightSmall
+                                    : featuresBackgroundImage.height
                             }
                             backgroundImage
                         />
@@ -167,12 +220,22 @@ const ProjectPageTemplate = ({
                     </section>
                 </div>
                 <div className={styles.backgroundImageContainer}>
-                    {(developmentBackgroundImageSmallScreenAlt || developmentBackgroundImage) && (
+                    {(developmentBackgroundImage.srcSmall || developmentBackgroundImage.src) && (
                         <CloudinaryImage
                             fileName={
-                                developmentBackgroundImageSmallScreenAlt && smallScreen
-                                    ? developmentBackgroundImageSmallScreenAlt
-                                    : developmentBackgroundImage
+                                developmentBackgroundImage.srcSmall && smallScreen
+                                    ? developmentBackgroundImage.srcSmall
+                                    : developmentBackgroundImage.src
+                            }
+                            width={
+                                developmentBackgroundImage.srcSmall && smallScreen
+                                    ? developmentBackgroundImage.widthSmall
+                                    : developmentBackgroundImage.width
+                            }
+                            height={
+                                developmentBackgroundImage.srcSmall && smallScreen
+                                    ? developmentBackgroundImage.heightSmall
+                                    : developmentBackgroundImage.height
                             }
                             backgroundImage
                         />

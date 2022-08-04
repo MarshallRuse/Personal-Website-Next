@@ -7,38 +7,56 @@ import MaterialUILogo from "../../components/svgs/logos/colorless/material-ui.sv
 
 const carouselImages = [
     {
-        imageSrc: "RotationCoordinatorReportFormatter/landing",
+        src: "RotationCoordinatorReportFormatter/landing",
         description: "The first thing you see",
+        width: 1887,
+        height: 857,
     },
     {
-        imageSrc: "RotationCoordinatorReportFormatter/whatIsThis",
+        src: "RotationCoordinatorReportFormatter/whatIsThis",
         description: "Collapse panel explaining the app's purpose",
+        width: 1878,
+        height: 856,
     },
     {
-        imageSrc: "RotationCoordinatorReportFormatter/missingHeadersValidation",
+        src: "RotationCoordinatorReportFormatter/missingHeadersValidation",
         description: "Header validation of uploaded CSV, with requirements explanation",
+        width: 1891,
+        height: 858,
     },
     {
-        imageSrc: "RotationCoordinatorReportFormatter/groupedResidentsLandscape",
-        smallScreenAltSrc: "RotationCoordinatorReportFormatter/groupedResidents",
+        src: "RotationCoordinatorReportFormatter/groupedResidentsLandscape",
+        srcSmall: "RotationCoordinatorReportFormatter/groupedResidents",
         description: "The uploaded residents are grouped by Block, Rotation, and Hospital",
+        width: 1887,
+        height: 857,
+        widthSmall: 736,
+        heightSmall: 846,
     },
     {
-        imageSrc: "RotationCoordinatorReportFormatter/rotationCoordinatorsMerged",
+        src: "RotationCoordinatorReportFormatter/rotationCoordinatorsMerged",
         description: "Rotations' respective coordinators are merged appropriately, merged date is color-coded",
+        width: 1890,
+        height: 858,
     },
     {
-        imageSrc: "RotationCoordinatorReportFormatter/EPAsToExport",
+        src: "RotationCoordinatorReportFormatter/EPAsToExport",
         description:
             "Entrustable Professional Activities for each rotation are merged appropriately, merged data is color-coded",
+        width: 1863,
+        height: 857,
     },
     {
-        imageSrc: "RotationCoordinatorReportFormatter/doneUploadingMessage",
+        src: "RotationCoordinatorReportFormatter/doneUploadingMessage",
         description: "Users are instructed for further actions upon completion",
+        width: 1890,
+        height: 858,
     },
     {
-        imageSrc: "RotationCoordinatorReportFormatter/filters",
+        src: "RotationCoordinatorReportFormatter/filters",
         description: "Undesired blocks, programs, and rotations can be filtered out of the data at any point",
+        width: 1902,
+        height: 861,
     },
 ];
 
@@ -202,16 +220,22 @@ const DevelopmentInfo = () => (
 export default function RotationCoordinatorReportFormatter() {
     return (
         <ProjectPageTemplate
-            carouselBackgroundImage='RotationCoordinatorReportFormatter/torontoAerial'
+            carouselBackgroundImage={{
+                src: "RotationCoordinatorReportFormatter/torontoAerial",
+                width: 5838,
+                height: 3892,
+            }}
             pageTitle='Rotation Coordinator Report Formatter App'
             projectSourceLink='https://github.com/MarshallRuse/rotation-coordinator-data-formatter'
             projectDemoLink='https://rotation-coordinator-report-formatter.netlify.app'
             carouselImages={carouselImages}
             backgroundInfo={<BackgroundInfo />}
-            featuresBackgroundImage='RotationCoordinatorReportFormatter/calendarCorkboard'
+            featuresBackgroundImage={{
+                src: "RotationCoordinatorReportFormatter/calendarCorkboard",
+                width: 3335,
+                height: 5002,
+            }}
             featuresInfo={<FeaturesInfo />}
-            developmentBackgroundImage=''
-            developmentBackgroundImageSmallScreenAlt=''
             developmentInfo={<DevelopmentInfo />}
             openGraphImages={[
                 {

@@ -32,16 +32,22 @@ const carouselImages = [
         ),
     },
     {
-        imageSrc: "RoverFollower/RoverFollowerOneFollower",
+        src: "RoverFollower/RoverFollowerOneFollower",
         description: "A scenario with one Follower Rover",
+        width: 1526,
+        height: 950,
     },
     {
-        imageSrc: "RoverFollower/RoverFollowerPerformanceAnalysis",
+        src: "RoverFollower/RoverFollowerPerformanceAnalysis",
         description: "The Matplotlib performance analysis of the Follower, post-run",
+        width: 1530,
+        height: 958,
     },
     {
-        imageSrc: "RoverFollower/RoverFollowerMultipleFollowers",
+        src: "RoverFollower/RoverFollowerMultipleFollowers",
         description: "A convoy of daisy-chained Leader-Followers",
+        width: 1533,
+        height: 954,
     },
 ];
 
@@ -54,7 +60,15 @@ const BackgroundInfo = () => (
     </p>
 );
 
-const FeaturesInfo = () => <CloudinaryImage fileName='RoverFollower/RoverFollowerPoster' styling={{ width: "100%" }} />;
+const FeaturesInfo = () => (
+    <CloudinaryImage
+        fileName='RoverFollower/RoverFollowerPoster'
+        width={3600}
+        height={5400}
+        altText='The final poster for the Rover Follower project'
+        styling={{ width: "100%" }}
+    />
+);
 
 const DevelopmentInfo = () => (
     <>
@@ -93,18 +107,22 @@ const DevelopmentInfo = () => (
 export default function RoverFollower() {
     return (
         <ProjectPageTemplate
-            carouselBackgroundImage='RoverFollower/marsBackground'
+            carouselBackgroundImage={{ src: "RoverFollower/marsBackground", width: 1280, height: 720 }}
             autoPlayCarousel={false}
             pageTitle='Rover Follower'
             projectSourceLink='https://github.com/MarshallRuse/Rover-Follower-Challenge'
             carouselImages={carouselImages}
             backgroundInfo={<BackgroundInfo />}
-            featuresBackgroundImage='RoverFollower/marsStriationsBackground'
-            featuresBackgroundSmallScreenAlt='RoverFollower/marsCliffBackground'
+            featuresBackgroundImage={{
+                src: "RoverFollower/marsStriationsBackground",
+                width: 2880,
+                height: 1800,
+                srcSmall: "RoverFollower/marsCliffBackground",
+                widthSmall: 2020,
+                heightSmall: 3042,
+            }}
             featuresInfo={<FeaturesInfo />}
             featuresAltTitle='Poster'
-            developmentBackgroundImage='WorkoutLogger/workoutBackground'
-            developmentBackgroundImageSmallScreenAlt='WorkoutLogger/curlBackground'
             developmentInfo={<DevelopmentInfo />}
             developmentAltTitle='Report'
             openGraphImages={[

@@ -10,61 +10,88 @@ import MySQLLogo from "../../components/svgs/logos/colorless/mysql.svg";
 
 const carouselImages = [
     {
-        imageSrc: "SnazzyStock/cart",
+        src: "SnazzyStock/cart",
         description: "A cart to record sales transactions",
+        width: 1907,
+        height: 857,
     },
     {
-        imageSrc: "SnazzyStock/addToCart",
+        src: "SnazzyStock/addToCart",
         description: "The modal to add a product to the cart",
+        width: 1898,
+        height: 866,
     },
     {
-        imageSrc: "SnazzyStock/addToCartAutocomplete",
+        src: "SnazzyStock/addToCartAutocomplete",
         description: "Autocomplete search by SKU or product name for adding product to cart",
+        width: 1901,
+        height: 862,
     },
     {
-        imageSrc: "SnazzyStock/salesPage",
-        smallScreenAltSrc: "SnazzyStock/groupedResidents",
+        src: "SnazzyStock/salesPage",
         description: "List of sales by date",
+        width: 1902,
+        height: 861,
     },
     {
-        imageSrc: "SnazzyStock/salesByDate",
+        src: "SnazzyStock/salesByDate",
         description: "Sales Record - By Date page - summary section",
+        width: 1906,
+        height: 864,
     },
     {
-        imageSrc: "SnazzyStock/salesByDate-TransactionRecords",
+        src: "SnazzyStock/salesByDate-TransactionRecords",
         description: "Sales Record - By Date - list of transactions",
+        width: 1891,
+        height: 859,
     },
     {
-        imageSrc: "SnazzyStock/suppliersList",
+        src: "SnazzyStock/suppliersList",
         description: "Supplier summaries as links to Supplier pages",
+        width: 1908,
+        height: 857,
     },
     {
-        imageSrc: "SnazzyStock/supplierPage",
+        src: "SnazzyStock/supplierPage",
         description: "Supplier page",
+        width: 1906,
+        height: 864,
     },
     {
-        imageSrc: "SnazzyStock/supplierPage-CostRevenueHistory",
+        src: "SnazzyStock/supplierPage-CostRevenueHistory",
         description: "Cost/Revenue chart on the Supplier page",
+        width: 1901,
+        height: 856,
     },
     {
-        imageSrc: "SnazzyStock/purchaseOrder",
+        src: "SnazzyStock/purchaseOrder",
         description: "Purchase Order page summary section",
+        width: 1897,
+        height: 853,
     },
     {
-        imageSrc: "SnazzyStock/purchaseOrders-Categories",
+        src: "SnazzyStock/purchaseOrders-Categories",
         description: "Purchase Order page chart of category of items purchased",
+        width: 1907,
+        height: 860,
     },
     {
-        imageSrc: "SnazzyStock/productsPage",
+        src: "SnazzyStock/productsPage",
         description: "List of products",
+        width: 1901,
+        height: 863,
     },
     {
-        imageSrc: "SnazzyStock/productPage",
+        src: "SnazzyStock/productPage",
         description: "Product page with Variation sales histories by date",
+        width: 1898,
+        height: 863,
     },
     {
-        imageSrc: "SnazzyStock/addProducts",
+        src: "SnazzyStock/addProducts",
         description: "Add new product form with support for variable or simple products",
+        width: 1898,
+        height: 866,
     },
 ];
 
@@ -181,18 +208,22 @@ const DevelopmentInfo = () => (
 export default function SnazzyStock() {
     return (
         <ProjectPageTemplate
-            carouselBackgroundImage='SnazzyStock/chainsBanner'
+            carouselBackgroundImage={{ src: "SnazzyStock/chainsBanner", width: 1024, height: 529 }}
             pageTitle='Snazzy Stock App'
             projectSourceLink='private'
             projectDemoLink=''
             carouselImages={carouselImages}
             backgroundInfo={<BackgroundInfo />}
-            featuresBackgroundImage='SnazzyStock/hoops'
-            featuresBackgroundImageSmallScreenAlt='SnazzyStock/pendants'
+            featuresBackgroundImage={{
+                src: "SnazzyStock/hoops",
+                width: 4032,
+                height: 1960,
+                srcSmall: "SnazzyStock/pendants",
+                widthSmall: 1960,
+                heightSmall: 4032,
+            }}
             featuresInfo={<FeaturesInfo />}
             developmentInfo={<DevelopmentInfo />}
-            developmentBackgroundImage=''
-            developmentBackgroundImageSmallScreenAlt=''
             openGraphImages={[
                 {
                     url: "https://res.cloudinary.com/marsh/image/upload/v1650284528/portfolio/SnazzyStock/salesPage.png",
