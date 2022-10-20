@@ -10,19 +10,19 @@ import MySQLLogo from "../../components/svgs/logos/colorless/mysql.svg";
 
 const carouselImages = [
     {
-        src: "SnazzyStock/cart",
+        src: "SnazzyStock/cart2",
         description: "A cart to record sales transactions",
         width: 1907,
         height: 857,
     },
     {
-        src: "SnazzyStock/addToCart",
+        src: "SnazzyStock/addToCart2",
         description: "The modal to add a product to the cart",
         width: 1898,
         height: 866,
     },
     {
-        src: "SnazzyStock/addToCartAutocomplete",
+        src: "SnazzyStock/addToCartAutocomplete2",
         description: "Autocomplete search by SKU or product name for adding product to cart",
         width: 1901,
         height: 862,
