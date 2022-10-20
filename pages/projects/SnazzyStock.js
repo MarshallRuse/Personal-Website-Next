@@ -3,6 +3,7 @@ import ProjectPageTemplate from "../../components/elements/ProjectPageTemplate";
 import { IconRow, IconBox, NavLink, SubSubsectionTitle } from "../../components/elements/styledComponents";
 import GlowingIcon from "../../components/elements/GlowingIcon";
 import ReactLogo from "../../components/svgs/logos/colorless/react.svg";
+import TypeScriptLogo from "../../components/svgs/logos/colorless/typescript.svg";
 import MaterialUILogo from "../../components/svgs/logos/colorless/material-ui.svg";
 import ExpressLogo from "../../components/svgs/logos/colorless/express.svg";
 import NodejsLogo from "../../components/svgs/logos/colorless/nodejs.svg";
@@ -156,6 +157,11 @@ const DevelopmentInfo = () => (
             <IconBox>
                 <GlowingIcon title='React' glowColor={styleVariables.colorReact}>
                     <ReactLogo />
+                </GlowingIcon>
+            </IconBox>
+            <IconBox>
+                <GlowingIcon title='TypeScript' glowColor={styleVariables.colorTypeScript}>
+                    <TypeScriptLogo />
                 </GlowingIcon>
             </IconBox>
             <IconBox>

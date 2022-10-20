@@ -179,13 +179,13 @@ const AboutMeSection = () => {
                                         <ul className='haloList'>
                                             <li>
                                                 <NavLink
-                                                    href='https://www.typescriptlang.org/'
+                                                    href='https://d3js.org/'
                                                     target='_blank'
                                                     rel='noopener noreferrer'
                                                 >
-                                                    TypeScript
+                                                    D3.js
                                                 </NavLink>{" "}
-                                                for type-safe, more easily collaborative and refactorable code
+                                                to create beautiful, customizable charts
                                             </li>
                                             <li>
                                                 <NavLink
@@ -343,15 +343,7 @@ const AboutMeSection = () => {
                                     </FadeDownText>
                                     <FadeDownText motionKey='fd-text-whats-next-1-1'>
                                         <p>
-                                            Two of the most immediate skills I&apos;ll be acquiring are{" "}
-                                            <NavLink
-                                                href='https://www.typescriptlang.org/'
-                                                target='_blank'
-                                                rel='noopener noreferrer'
-                                            >
-                                                TypeScript
-                                            </NavLink>{" "}
-                                            and
+                                            One of the skills I&apos;m looking forward most to acquiring is{" "}
                                             <NavLink
                                                 href='https://graphql.org/'
                                                 target='_blank'
@@ -359,12 +351,11 @@ const AboutMeSection = () => {
                                             >
                                                 GraphQL
                                             </NavLink>{" "}
-                                            to modernize my JavaScript writing and API-querying skills. I&apos;m looking
-                                            forward to learning how to make my JavaScript code more type-safe,
-                                            shareable, and refactorable, and similarly how to make my API quesries more
-                                            type-safe, but also flexible and light-weight.
+                                            to enhance my API-querying skillset. I&apos;m looking forward to learning
+                                            how to make my queries more type-safe, but also flexible and light-weight.
                                         </p>
                                     </FadeDownText>
+
                                     <FadeDownText motionKey='fd-text-whats-next-1-2'>
                                         <p>
                                             I have also heard really good things about{" "}
@@ -384,12 +375,23 @@ const AboutMeSection = () => {
                                                 SvelteKit
                                             </NavLink>{" "}
                                             from former predominantly-React developers, so want to give that a shot as
-                                            the buzz around is that it&apos;s the next big framework.
+                                            the buzz around is that it&apos;s the next big framework and that its an
+                                            absolute joy to use.
                                         </p>
                                     </FadeDownText>
                                     <FadeDownText motionKey='fd-text-whats-next-1-3'>
                                         <p>
-                                            On the more fun and purely-aesthetic side of things, I am enrolled in{" "}
+                                            On the more aesthetic side of things, I&apos;m also looking forward to
+                                            learning{" "}
+                                            <NavLink href='https://d3js.org/' target='_blank' rel='noopener noreferrer'>
+                                                D3.js
+                                            </NavLink>{" "}
+                                            in order to be able to build beautiful, unique, and customizable charts.
+                                        </p>
+                                    </FadeDownText>
+                                    <FadeDownText motionKey='fd-text-whats-next-1-4'>
+                                        <p>
+                                            On the purely-aesthetic side of things, I am enrolled in{" "}
                                             <NavLink
                                                 href='https://threejs-journey.com/'
                                                 target='_blank'

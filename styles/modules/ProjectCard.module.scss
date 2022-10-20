@@ -263,3 +263,8 @@
     --aug-border-bg: var(--color-tailwindcss);
     background: linear-gradient(150deg, transparent, rgba(var(--color-tailwindcss-raw), 0.5));
 }
+
+.stackIconWrapper.typescript {
+    --aug-border-bg: var(--color-typescript);
+    background: linear-gradient(150deg, transparent, rgba(var(--color-typescript-raw), 0.5));
+}

@@ -38,6 +38,7 @@ const ProjectsSection = () => (
                         sourceLink=''
                         stackIcons={[
                             { class: "react", icon: "/svgs/logos/react.svg" },
+                            { class: "typescript", icon: "/svgs/logos/typescript.svg" },
                             { class: "materialui", icon: "/svgs/logos/material-ui.svg" },
                             { class: "express", icon: "/svgs/logos/express.svg" },
                             { class: "nodejs", icon: "/svgs/logos/nodejs.svg" },

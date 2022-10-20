@@ -17,6 +17,7 @@ import ReactLogo from "../svgs/logos/colorless/react.svg";
 import ReduxLogo from "../svgs/logos/colorless/redux.svg";
 import SassLogo from "../svgs/logos/colorless/sass.svg";
 import TailwindCSSLogo from "../svgs/logos/colorless/tailwindcss.svg";
+import TypeScriptLogo from "../svgs/logos/colorless/typescript.svg";
 import GlowingIcon from "../elements/GlowingIcon.js";
 import { IconRow, IconBox, SectionTitle, SubSubsectionTitle } from "../elements/styledComponents";
 
@@ -46,6 +47,11 @@ const SkillsSection = () => {
                 <IconBox>
                     <GlowingIcon title='JavaScript' glowColor={styleVariables.colorJavaScript}>
                         <JavaScriptLogo />
+                    </GlowingIcon>
+                </IconBox>
+                <IconBox>
+                    <GlowingIcon title='TypeScript' glowColor={styleVariables.colorTypeScript}>
+                        <TypeScriptLogo />
                     </GlowingIcon>
                 </IconBox>
                 <IconBox>
