@@ -170,3 +170,23 @@ a {
         }
     }
 }
+
+.subtleScrollbar {
+    /* width */
+    &::-webkit-scrollbar {
+        height: 5px;
+        width: 5px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: var(--color-blue-dark);
+        border-radius: 10px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: var(--color-pink);
+        //border-radius: 10px;
+    }
+}
