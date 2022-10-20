@@ -1,7 +1,5 @@
 import Image from "next/image";
 import { buildUrl } from "cloudinary-build-url";
-import { Cloudinary } from "@cloudinary/url-gen";
-import { AdvancedImage, lazyload, accessibility, responsive, placeholder } from "@cloudinary/react";
 import styles from "../../styles/modules/CloudinaryImage.module.scss";
 
 const CloudinaryImage = ({
