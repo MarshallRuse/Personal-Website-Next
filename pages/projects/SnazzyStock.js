@@ -216,7 +216,7 @@ export default function SnazzyStock() {
         <ProjectPageTemplate
             carouselBackgroundImage={{ src: "SnazzyStock/chainsBanner", width: 1024, height: 529 }}
             pageTitle='Snazzy Stock App'
-            projectSourceLink='private'
+            projectSourceLink='https://github.com/MarshallRuse/SnazzyStockApp-Next'
             projectDemoLink=''
             carouselImages={carouselImages}
             backgroundInfo={<BackgroundInfo />}
